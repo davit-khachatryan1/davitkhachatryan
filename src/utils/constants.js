@@ -3,7 +3,6 @@ import {
   FaCss3,
   FaReact,
   FaSass,
-  FaPython,
   FaNodeJs,
   FaGithub,
   FaLinkedin,
@@ -14,6 +13,8 @@ import {
 import { DiMongodb } from "react-icons/di";
 
 import { TbBrandReactNative } from "react-icons/tb";
+
+import { SiNuxtdotjs } from "react-icons/si";
 
 import {
   TbBrandTypescript,
@@ -78,10 +79,6 @@ export const skillsData = [
     icon: TbBrandBootstrap,
   },
   {
-    name: "Python",
-    icon: FaPython,
-  },
-  {
     name: "ReactJS",
     icon: FaReact,
   },
@@ -100,6 +97,10 @@ export const skillsData = [
   {
     name: "VueJS",
     icon: FaVuejs,
+  },  
+  {
+    name: "Nuxt",
+    icon: SiNuxtdotjs,
   },
   {
     name: "Angular",
