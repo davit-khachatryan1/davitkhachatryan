@@ -8,13 +8,23 @@ import {
   FaLinkedin,
   FaVuejs,
   FaAngular,
+  FaEnvelope,
+  FaTelegramPlane
 } from "react-icons/fa";
 
 import { DiMongodb } from "react-icons/di";
 
 import { TbBrandReactNative } from "react-icons/tb";
 
-import { SiNuxtdotjs } from "react-icons/si";
+import {
+  SiNuxtdotjs,
+  SiWagmi,
+  SiWeb3Dotjs,
+  SiEthers,
+  SiSolana,
+  SiEthereum,
+  SiHiveBlockchain,
+} from "react-icons/si";
 
 import {
   TbBrandTypescript,
@@ -34,11 +44,19 @@ export const links = [
   { text: "Skills", path: "/skills" },
   { text: "Projects", path: "/projects" },
   { text: "Experience", path: "/experience" },
-  { text: "Contact", path: "/contact" },
+  // { text: "Contact", path: "/contact" },
   { text: "Resume", path: "/resume" },
 ];
 
 export const interestsData = [
+  {
+    interest: "Blockchain",
+    icon: SiHiveBlockchain,
+  },
+  {
+    interest: "AI",
+    icon: GiArtificialIntelligence,
+  },
   {
     interest: "Software Engineering",
     icon: BsCodeSlash,
@@ -46,10 +64,6 @@ export const interestsData = [
   {
     interest: "Software Development",
     icon: AiFillCode,
-  },
-  {
-    interest: "Robotics",
-    icon: BsRobot,
   },
 ];
 
@@ -97,7 +111,7 @@ export const skillsData = [
   {
     name: "VueJS",
     icon: FaVuejs,
-  },  
+  },
   {
     name: "Nuxt",
     icon: SiNuxtdotjs,
@@ -143,16 +157,70 @@ export const skillsData = [
     icon: SiGnubash,
   },
   {
-    name: "Markdown",
-    icon: BsMarkdown,
+    name: "Web3.js",
+    icon: SiWeb3Dotjs,
+  },
+  {
+    name: "Ethers.js",
+    icon: SiEthers,
+  },
+  {
+    name: "Wagmi",
+    icon: SiWagmi,
+  },
+  {
+    name: "Ethereum",
+    icon: SiEthereum,
+  },
+  {
+    name: "Solana",
+    icon: SiSolana,
   },
 ];
 
 export const workData = [
   {
+    company: "Freelance",
+    designation: "Full Stack Web3 Developer",
+    duration: "02/2024 - Present",
+    companyImg: "freelance.jpeg",
+    description: (
+      <>
+        <ul>
+          <li>
+            Helped teams build programs and systems, serving business needs.
+          </li>
+          <li>Implemented Web3 solutions into front-end.</li>
+          <li>
+            Fully covered front-end implementations from blockchain and Web3
+            tools into NFT minting app.
+          </li>
+          <li>
+            Worked closely with business stakeholders to identify requirements
+            and develop solutions accordingly.
+          </li>
+          <li>
+            Troubleshot minor problems and reported larger technical issues.
+          </li>
+          <li>
+            Used Web3 tools such as wagmi, ethers.js, and others to integrate
+            blockchain functionality. Worked with Ethereum-based solutions,
+            interacting with smart contracts and handling transactions, as well
+            as utilizing Solana Web3.js library for interacting with the Solana
+            blockchain, enabling seamless wallet integration, transaction
+            signing, and token management. Integrated various Web3 tools to
+            support multi-chain interactions, enhancing blockchain
+            interoperability.
+          </li>
+          <li>Started learning Solidity.</li>
+        </ul>
+      </>
+    ),
+  },
+  {
     company: "Optimum Partners",
     designation: "Full-stack Developer",
-    duration: "02/2024 - present",
+    duration: "02/2024 - 05/2024",
     companyImg: "optimum_partners.jpeg",
     description: (
       <>
@@ -174,8 +242,8 @@ export const workData = [
             I am working with geographically diverse teams and stakeholders.
           </li>
           <li>
-            I&apos;m working on international newspaper&apos;s website and it&apos;s providing
-            tools.
+            I&apos;m working on international newspaper&apos;s website and
+            it&apos;s providing tools.
           </li>
         </ul>
       </>
@@ -216,7 +284,7 @@ export const workData = [
   {
     company: "Upwork",
     designation: "Full-stack Developer",
-    duration: "05/2019 - present",
+    duration: "05/2019 - 09/2022",
     companyImg: "upwork.png",
     description: (
       <>
@@ -229,8 +297,8 @@ export const workData = [
             Building, testing, and deploying software applications and features.
           </li>
           <li>
-            Some big projects I&apos;ve worked on are the front-end parts of the Web3
-            project designed for revolutionizing the real estate investment
+            Some big projects I&apos;ve worked on are the front-end parts of the
+            Web3 project designed for revolutionizing the real estate investment
             landscape: leveraged blockchain, cryptocurrency, and NFT
             technologies, Fintech project based on alpha vantage API and Yahoo
             finance API, working on algorithms that do calculations for best
@@ -314,6 +382,18 @@ export const socialMediaLinks = [
     icon: FaLinkedin,
     backgroundColor: "social.linkedin",
     hoverColor: "social.linkedinHover",
+  },
+  {
+    href: "mailto:davitkhachatryan25@gmail.com",
+    icon: FaEnvelope,
+    backgroundColor: "red.600",
+    hoverColor: "red.500",
+  },
+  {
+    href: "https://t.me/DavitKhachatryan",
+    icon: FaTelegramPlane,
+    backgroundColor: "blue.500",
+    hoverColor: "blue.400",
   },
 ];
 

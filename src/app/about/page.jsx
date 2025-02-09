@@ -45,13 +45,21 @@ const Page = () => {
                 <Text>
                   I&apos;m <span className="name">Davit</span>, a passionate
                   software developer. I specialize in{" "}
-                  <span className="tech">Web Development</span>, crafting
-                  seamless user experiences and robust backend solutions. With a
-                  knack for problem-solving, I thrive on creating elegant code
-                  that makes an impact. I&apos;m always exploring new tools and
-                  techniques to stay at the forefront of the ever-evolving tech
-                  landscape.
+                  <span className="tech">Full stack Development</span>, crafting
+                  seamless user experiences and robust backend solutions. With
+                  4+ years of experience as a full-stack developer, I specialize
+                  in creating modern, responsive, and user-friendly web
+                  applications. My work has spanned a variety of roles, from
+                  building fully customized websites from scratch to
+                  contributing to live products used by thousands. I excel in
+                  developing seamless user experiences using React, Next.js, and
+                  TypeScript, complemented by backend expertise in Node.js,
+                  Express.js, and databases like MongoDB and PostgreSQL. I also
+                  have hands-on experience with blockchain technologies,
+                  including integrating wallets, and building Web3-powered
+                  applications.
                 </Text>
+
                 <br />
                 <Text>
                   📫 Open to collaborations and exciting projects, I&apos;m

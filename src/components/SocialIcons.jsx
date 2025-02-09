@@ -10,14 +10,18 @@ const SocialIcons = () => {
       margin="1.5rem 0"
       display="flex"
       alignItems="center"
-      justifyContent={["center","left","left"]}
+      justifyContent={["center", "left", "left"]}
     >
       {socialMediaLinks.map((linkData, index) => (
         <Link
           key={index}
           href={linkData.href}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={linkData.href.startsWith("mailto:") ? "_self" : "_blank"}
+          rel={
+            linkData.href.startsWith("mailto:")
+              ? undefined
+              : "noopener noreferrer"
+          }
           _hover={{
             textDecoration: "none",
             backgroundColor: linkData.hoverColor,
