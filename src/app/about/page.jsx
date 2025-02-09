@@ -47,7 +47,7 @@ const Page = () => {
                   software developer. I specialize in{" "}
                   <span className="tech">Full stack Development</span>, crafting
                   seamless user experiences and robust backend solutions. With
-                  4+ years of experience as a full-stack developer, I specialize
+                  5+ years of experience as a full-stack developer, I specialize
                   in creating modern, responsive, and user-friendly web
                   applications. My work has spanned a variety of roles, from
                   building fully customized websites from scratch to
