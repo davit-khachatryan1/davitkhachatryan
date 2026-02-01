@@ -1,24 +1,24 @@
 "use client";
 import React from "react";
 import WorkCard from "./WorkCard";
-import { Heading, SimpleGrid, Center, Box } from "@chakra-ui/react";
+import { Heading, Center, Box } from "@chakra-ui/react";
 import { workData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 
 const Work = () => {
   return (
     <>
-      <Center>
-        <Box width={["80vw", "80vw", "79vw"]} height="100%">
+      <Center className="experience-page">
+        <Box className="experience-shell" w="100%" maxW="1040px" px={{ base: 5, md: 8 }}>
           <Heading className="sub-heading" size="md" my={3}>
             EXPERIENCE
           </Heading>
           <RevealWrapper className="load-hidden" delay={300}>
-            <SimpleGrid>
+            <Box className="experience-list">
               {workData.map((data, index) => {
-                return <WorkCard {...{ data }} key={index} />;
+                return <WorkCard {...{ data, index }} key={index} />;
               })}
-            </SimpleGrid>
+            </Box>
           </RevealWrapper>
         </Box>
       </Center>

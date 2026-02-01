@@ -3,12 +3,10 @@ import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import {
   Heading,
-  SimpleGrid,
   HStack,
   useRadioGroup,
   Center,
   Box,
-  Flex,
 } from "@chakra-ui/react";
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
@@ -31,14 +29,14 @@ const Projects = () => {
   const group = getRootProps();
 
   return (
-    <Center>
-      <Box width={["90vw", "90vw", "80vw"]} height="100%" marginBottom="4rem">
+    <Center className="projects-page">
+      <Box className="projects-shell" w="100%" maxW="1120px" px={{ base: 5, md: 8 }}>
         <Heading className="sub-heading" size="md" my={3}>
           PROJECTS
         </Heading>
 
-        <Flex {...group} w="100%" px="6" py="5" align="center" justify="center">
-          <HStack>
+        <Box {...group} className="projects-filter">
+          <HStack className="projects-filter__stack">
             {options.map((value) => {
               const radio = getRadioProps({ value });
               return (
@@ -48,16 +46,13 @@ const Projects = () => {
               );
             })}
           </HStack>
-        </Flex>
+        </Box>
         <RevealWrapper delay={300}>
-          <SimpleGrid
-            spacing={4}
-            templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
-          >
+          <Box className="projects-grid">
             {selectedData.map((data, index) => {
-              return <ProjectCard {...{ data }} key={index} />;
+              return <ProjectCard {...{ data, index }} key={index} />;
             })}
-          </SimpleGrid>
+          </Box>
         </RevealWrapper>
       </Box>
     </Center>

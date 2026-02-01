@@ -178,6 +178,52 @@ export const skillsData = [
   },
 ];
 
+export const skillsGroups = [
+  {
+    title: "Front-End Foundations",
+    caption: "Semantic UI, modern styling, and reliable component patterns.",
+    items: ["HTML5", "CSS3", "Javascript", "Typescript", "SASS", "Bootstrap"],
+  },
+  {
+    title: "AI & AI Tools",
+    caption: "Prompting, code copilots, and applied AI workflows.",
+    items: ["ChatGPT", "Claude Code", "Grok Code", "Cursor", "Prompt Engineering"],
+  },
+  {
+    title: "Modern Frameworks",
+    caption: "Production-ready front-end architecture and state.",
+    items: [
+      "ReactJS",
+      "NextJS",
+      "Redux",
+      // "React Native",
+      // "VueJS",
+      // "Nuxt",
+      // "Angular",
+    ],
+  },
+  {
+    title: "Back-End & APIs",
+    caption: "Node services with clean routing and scalable APIs.",
+    items: ["NodeJs", "Express"],
+  },
+  {
+    title: "Data & Storage",
+    caption: "Relational and document databases for app backbones.",
+    items: ["Postgres", "MongoDB"],
+  },
+  {
+    title: "Web3 & Chain",
+    caption: "Multi-chain tooling and wallet integrations.",
+    items: ["Web3.js", "Ethers.js", "Wagmi", "Ethereum", "Solana"],
+  },
+  {
+    title: "Tooling & Workflow",
+    caption: "Daily tooling that keeps delivery smooth.",
+    items: ["Git", "Github", "Postman", "Bash"],
+  },
+];
+
 export const workData = [
   {
     company: "Freelance",
@@ -318,6 +364,8 @@ export const projectsData = [
     image: "kontainer",
     link: "https://kontainer.com/da",
     source: null,
+    description: "A comprehensive container management platform that helps businesses streamline their shipping and logistics operations. Features include real-time tracking, inventory management, and automated documentation processing.",
+    stacks: ["React", "Node.js", "MongoDB", "Express", "Docker", "AWS"],
   },
   {
     type: "WEB-APP",
@@ -325,6 +373,8 @@ export const projectsData = [
     image: "solit",
     link: "https://solit-llc.com/",
     source: null,
+    description: "Modern corporate website for SolIT LLC, showcasing their IT solutions and services. Includes service portfolios, team profiles, case studies, and contact integration for potential clients.",
+    stacks: ["Next.js", "TypeScript", "Chakra UI", "Framer Motion", "Vercel"],
   },
   {
     type: "WEB-APP",
@@ -332,6 +382,8 @@ export const projectsData = [
     image: "dequity",
     link: "https://dequity.io/?utm_content=light",
     source: null,
+    description: "Decentralized equity platform enabling tokenization of traditional assets. Built for democratizing investment opportunities through blockchain technology and smart contracts.",
+    stacks: ["React", "Web3.js", "Ethereum", "Solidity", "IPFS", "Hardhat"],
   },
   {
     type: "WEB-APP",
@@ -339,6 +391,8 @@ export const projectsData = [
     image: "blocknite",
     link: "https://blocknite.vercel.app/",
     source: null,
+    description: "Blockchain-based gaming platform combining NFT technology with interactive gaming experiences. Features include digital asset ownership, play-to-earn mechanics, and cross-game interoperability.",
+    stacks: ["Next.js", "Solana", "Web3.js", "Three.js", "IPFS", "Vercel"],
   },
   {
     type: "WEB-APP",
@@ -346,6 +400,8 @@ export const projectsData = [
     image: "youmeme",
     link: "https://youmeme.com/",
     source: null,
+    description: "Social media platform focused on meme creation and sharing. Implements AI-powered content generation, viral analytics, and community-driven content curation with monetization features.",
+    stacks: ["React", "Node.js", "PostgreSQL", "Redis", "AWS S3", "OpenAI API"],
   },
   {
     type: "WEB-APP",
@@ -353,6 +409,8 @@ export const projectsData = [
     image: "passbase",
     link: "https://parallelmarkets.com/?utm_source=passbase.com",
     source: null,
+    description: "Identity verification and KYC platform for financial institutions. Provides secure, compliant user onboarding with advanced fraud detection and regulatory compliance tools.",
+    stacks: ["React", "Python", "Django", "PostgreSQL", "AWS", "Machine Learning"],
   },
   {
     type: "WEB-APP",
@@ -360,6 +418,8 @@ export const projectsData = [
     image: "cryptopool",
     link: "https://www.cryptopool.money/",
     source: null,
+    description: "Liquidity pool platform for cryptocurrency trading and yield farming. Features automated market making, impermanent loss protection, and multi-chain support for DeFi protocols.",
+    stacks: ["React", "Solidity", "Web3.js", "The Graph", "IPFS", "Polygon"],
   },
   {
     type: "WEB-APP",
@@ -367,6 +427,8 @@ export const projectsData = [
     image: "raizer",
     link: "https://raize-front.web.app/",
     source: null,
+    description: "Crowdfunding platform connecting innovative startups with investors. Includes project discovery, investment tracking, milestone-based funding, and comprehensive analytics dashboard.",
+    stacks: ["Vue.js", "Firebase", "Stripe API", "Chart.js", "Node.js", "MongoDB"],
   },
 ];
 

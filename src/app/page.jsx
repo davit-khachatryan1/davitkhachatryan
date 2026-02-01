@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useCallback } from "react";
-import { Heading, Flex, Center, Image } from "@chakra-ui/react";
+import { Heading, Flex, Center, Image, Box, Text } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/next-js";
 import Typed from "typed.js";
 import SocialIcons from "../components/SocialIcons";
 import Particles from "react-tsparticles";
@@ -16,7 +17,11 @@ export default function Home() {
 
   useEffect(() => {
     const options = {
-      strings: ["Full stack Javascript Developer", "Coder"],
+      strings: [
+        "Full-stack JavaScript Developer",
+        "Web3 Product Builder",
+        "UI-Focused Engineer",
+      ],
       typeSpeed: 50,
       backSpeed: 35,
       loop: true,
@@ -30,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <Center>
+      <Center className="home-hero__wrapper">
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -38,66 +43,46 @@ export default function Home() {
           position="absolute"
           zIndex={0}
         />
-        <Flex
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          height="100%"
-          width="100%"
-          position="absolute"
-          top="45vh"
-          zIndex={1}
-        >
+        <Flex className="home-hero" zIndex={1}>
           <RevealWrapper className="load-hidden" delay={300}>
-            <Image
-              objectFit="shrink"
-              src="/images/ar-profile-transformed.png"
-              alt="profile-image"
-              width={["13rem", "13rem", "15rem"]}
-              height={["13rem", "13rem", "15rem"]}
-              marginTop={["5rem", "5rem", null]}
-              marginBottom={["1rem", "1rem", null]}
-              backgroundColor="blueTheme.navBg"
-              borderRadius="30rem"
-            />
+            <Box className="home-hero__avatar">
+              <Image
+                objectFit="cover"
+                src="/images/ar-profile-transformed.png"
+                alt="profile-image"
+              />
+            </Box>
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={400}>
-            <Heading
-              size="lg"
-              color="blueTheme.navLinkActive"
-              fontFamily="Righteous"
-            >
-              Hi, my name is
-            </Heading>
+            <Text className="home-hero__eyebrow">Hi, my name is</Text>
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={500}>
-            <Flex
-              alignItems="center"
-              my="1rem"
-              flexDirection={["column", "column", "row"]}
-            >
-              <Heading
-                fontFamily="Black Ops One"
-                fontSize={["2.5rem", "3.7rem"]}
-              >
-                Davit
-              </Heading>
-
-              <Heading
-                fontFamily="Black Ops One"
-                fontSize={["2.5rem", "3.7rem"]}
-                ml={[null, "1rem"]}
-              >
-                Khachatryan
-              </Heading>
-            </Flex>
-          </RevealWrapper>
-          <RevealWrapper className="load-hidden" delay={600}>
-            <Heading my={3} size="lg" fontFamily="Righteous">
-              I &apos;m <span className="typed-text" ref={typedTextRef}></span>
+            <Heading className="home-hero__name">
+              Davit <span className="home-hero__name-accent">Khachatryan</span>
             </Heading>
           </RevealWrapper>
+          <RevealWrapper className="load-hidden" delay={600}>
+            <Text className="home-hero__typing">
+              I&apos;m <span className="typed-text" ref={typedTextRef}></span>
+            </Text>
+          </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={700}>
+            <Text className="home-hero__subtitle">
+              Building scalable web experiences with modern stacks and Web3
+              tooling.
+            </Text>
+          </RevealWrapper>
+          <RevealWrapper className="load-hidden" delay={800}>
+            <Flex className="home-hero__cta">
+              <Link href="/projects" className="home-cta home-cta--primary">
+                View Projects
+              </Link>
+              <Link href="/resume" className="home-cta home-cta--ghost">
+                Resume
+              </Link>
+            </Flex>
+          </RevealWrapper>
+          <RevealWrapper className="load-hidden" delay={900}>
             <SocialIcons />
           </RevealWrapper>
         </Flex>

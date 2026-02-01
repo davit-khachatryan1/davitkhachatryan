@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDisclosure, Flex, Button, VStack } from "@chakra-ui/react";
+import { useDisclosure, Flex, IconButton, VStack } from "@chakra-ui/react";
 import DrawerComponent from "./DrawerComponent";
 import { IoMdMenu } from "react-icons/io";
 import { Link } from "@chakra-ui/next-js";
@@ -16,22 +16,31 @@ export default function MobileHeader({ pathname }) {
 
   return (
     <Flex display={{ base: "flex", md: "none" }}>
-      <Button ref={btnRef} onClick={onOpen}>
-        <IoMdMenu size="26px" />
-      </Button>
+      <IconButton
+        ref={btnRef}
+        onClick={onOpen}
+        aria-label="Open navigation menu"
+        icon={<IoMdMenu size="22px" />}
+        className="mobile-menu-btn"
+        variant="unstyled"
+      />
 
-      <DrawerComponent isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef}>
-        <VStack alignItems="left">
+      <DrawerComponent
+        isOpen={isOpen}
+        onClose={onClose}
+        btnRef={btnRef}
+        title="Menu"
+      >
+        <VStack alignItems="left" w="100%">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.path}
-              fontWeight="extrabold"
+              className="drawer-nav-link"
               _hover={{ textDecoration: "none" }}
-              fontSize="md"
               my={2}
-              textAlign="center"
-              color={pathname === link.path ? "blueTheme.navLinkActive" : ""}
+              color={pathname === link.path ? "blueTheme.navLinkActive" : undefined}
+              aria-current={pathname === link.path ? "page" : undefined}
             >
               {link.text}
             </Link>

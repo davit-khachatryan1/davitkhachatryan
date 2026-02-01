@@ -1,16 +1,14 @@
 import React from "react";
 import { socialMediaLinks } from "../utils/constants";
-import { Flex } from "@chakra-ui/react";
-import { Icon } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 
 const SocialIcons = () => {
   return (
     <Flex
-      margin="1.5rem 0"
-      display="flex"
+      className="social-icons"
       alignItems="center"
-      justifyContent={["center", "left", "left"]}
+      justifyContent={["center", "center", "center"]}
     >
       {socialMediaLinks.map((linkData, index) => (
         <Link
@@ -22,19 +20,11 @@ const SocialIcons = () => {
               ? undefined
               : "noopener noreferrer"
           }
-          _hover={{
-            textDecoration: "none",
-            backgroundColor: linkData.hoverColor,
+          className="social-icon"
+          style={{
+            "--brand": linkData.backgroundColor,
+            "--brand-hover": linkData.hoverColor,
           }}
-          backgroundColor={linkData.backgroundColor}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          my={3}
-          mr={3}
-          fontSize={["1.5rem", "2rem", "2rem"]}
-          padding="10px"
-          borderRadius="1rem"
         >
           <Icon as={linkData.icon} />
         </Link>

@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import {
-  Card,
-  CardBody,
   Image,
   Heading,
   Text,
@@ -13,46 +11,44 @@ import {
 const WorkCard = (props) => {
   const { company, duration, designation, companyImg, description } =
     props.data;
+  const { index } = props;
+  const isCurrent =
+    typeof duration === "string" &&
+    duration.toLowerCase().includes("present");
   return (
     <>
-      <Card my={3} transition="all .3s ease-in-out"
-       backgroundColor="blueTheme.card"
-        _hover={{transform:"scale(0.99)"}} width= "80vw"
-          boxShadow="0 10px 30px -15px blueTheme.navShadow"
+      <Box
+        className="experience-card"
+        style={{ "--delay": `${(index || 0) * 90}ms` }}
+      >
+        <Flex
+          className="experience-card__inner"
+          flexDirection={["column", "column", "row"]}
+          alignItems={["flex-start", "flex-start", "flex-start"]}
+          gap={{ base: 3, md: 4 }}
         >
-        <CardBody>
-          <Flex flexDirection={["column","column","row"]} justifyContent="flexStart" alignItems="center">
+          <Box className="experience-logo">
             <Image
-              objectFit="cover"
               src={`/images/${companyImg}`}
               alt="Company Logo"
-              marginRight="1rem"
-              height={["15rem","15rem","13rem"]}
-              width={["15rem","15rem","13rem"]}
-              margin={["2rem auto","1rem","auto 1rem"]}
-              backgroundColor="white"
-              display={["none","unset","unset"]}
+              objectFit="cover"
             />
-            <Box>
-              <Heading fontSize="1.5rem">{company}</Heading>
-              <Heading size="sm" my={2}>
-                {duration}
-              </Heading>
-              <Text size="xs" my={2} fontStyle="italic">
-                {designation}
-              </Text>
-              <div
-                style={{
-                  marginLeft: "1.5rem",
-                  fontSize: "0.95rem",
-                }}
-              >
-                {description}
-              </div>
+          </Box>
+          <Box className="experience-content">
+            <Box className="experience-header">
+              <Box>
+                <Heading className="experience-title">{company}</Heading>
+                <Text className="experience-role">{designation}</Text>
+              </Box>
+              <Box className="experience-meta">
+                <Text className="experience-duration">{duration}</Text>
+                {isCurrent && <Text className="experience-badge">Current</Text>}
+              </Box>
             </Box>
-          </Flex>
-        </CardBody>
-      </Card>
+            <Box className="experience-description">{description}</Box>
+          </Box>
+        </Flex>
+      </Box>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import Favicon from "/public/images/favicon.png";
 import ClientRootLayout from "../components/ClientRootLayout";
+import Script from "next/script";
 
 export const metadata = {
   title: "Davit Khachatryan | Software Engineer",
@@ -22,5 +23,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <ClientRootLayout>{children}</ClientRootLayout>
+  return (
+    <html lang="en" className="sr">
+      <body
+        style={{
+          backgroundColor: "#02001E",
+        }}
+      >
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload" id="">
+          {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                  page_path: window.location.pathname,
+                  });
+              `}
+        </Script>
+        <ClientRootLayout>{children}</ClientRootLayout>
+      </body>
+    </html>
+  );
 }

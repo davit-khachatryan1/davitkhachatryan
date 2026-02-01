@@ -11,32 +11,46 @@ export default function Header() {
   return (
     <chakra.header
       id="header"
-      backgroundColor="blueTheme.navBg"
+      className="site-header"
       pos="sticky"
       top={0}
       zIndex="100"
-      boxShadow="0 10px 30px -10px blueTheme.navShadow"
-      
     >
-      <Flex w="100%" px="6" py="5" align="center" justify="space-between">
+      <Flex
+        className="site-header__inner"
+        w="100%"
+        px={{ base: 4, md: 6 }}
+        py={{ base: 3, md: 4 }}
+        align="center"
+        justify="space-between"
+      >
         <Link
           href="/"
-          fontFamily="Righteous"
+          className="logo-link"
           fontSize="lg"
-          _hover={{ textDecoration: "none", color:"blueTheme.navLinkActive",transition:"all .5s ease-in-out" }}
+          _hover={{
+            textDecoration: "none",
+            color: "blueTheme.navLinkActive",
+            transition: "all .5s ease-in-out",
+          }}
         >
           Davit Khachatryan {"</>"} {" "}
         </Link>
 
-        <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
+        <HStack
+          as="nav"
+          spacing="6"
+          display={{ base: "none", md: "flex" }}
+        >
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.path}
-              fontWeight="extrabold"
+              className={`nav-link ${
+                pathname === link.path ? "active-link" : ""
+              }`}
               _hover={{ textDecoration: "none", color: "blueTheme.navLinkActive" }}
-              fontSize="lg"
-              className={pathname === link.path ? "active-link" : ""}
+              aria-current={pathname === link.path ? "page" : undefined}
             >
               {link.text}
             </Link>

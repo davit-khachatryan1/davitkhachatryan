@@ -31,13 +31,18 @@ export default function DrawerComponent({
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent alignItems="center"
-        backgroundColor="blueTheme.navBg">
+        <DrawerContent
+          alignItems="center"
+          className="nav-drawer"
+          bg="rgba(8, 14, 30, 0.95)"
+          borderLeft="1px solid rgba(100, 255, 218, 0.18)"
+          backdropFilter="blur(16px)"
+        >
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />
           <DrawerHeader my={p}>
             <Text as="p"> {title} </Text>
           </DrawerHeader>
-          <DrawerBody>{children}</DrawerBody>
+          <DrawerBody className="nav-drawer__body">{children}</DrawerBody>
           <DrawerFooter>{footer}</DrawerFooter>
         </DrawerContent>
       </Drawer>
