@@ -14,7 +14,7 @@ import { RevealWrapper } from "next-reveal";
 
 const Page = () => {
   const focusTags = [
-    "Full Stack",
+    "Front-end",
     "React/Next.js",
     "TypeScript",
     "Node.js",
@@ -45,32 +45,27 @@ const Page = () => {
                   className="about-portrait"
                 />
                 <Text className="about-portrait-meta">
-                  Full stack / Web3 / UX
+                  Front-end / UI / Web3
                 </Text>
               </Box>
 
               <Box className="about-hero-card">
-                <Text className="about-kicker">Full-stack developer</Text>
+                <Text className="about-kicker">Front-end developer</Text>
                 <Box className="about-copy">
                   <Heading size="xl" className="about-title">
                     👋 Hey there
                   </Heading>
                   <Text className="about-paragraph">
-                    I&apos;m <span className="name">Davit</span>, a passionate
-                    software developer. I specialize in{" "}
-                    <span className="tech">Full stack Development</span>,
-                    crafting seamless user experiences and robust backend
-                    solutions. With 5+ years of experience as a full-stack
-                    developer, I specialize in creating modern, responsive, and
-                    user-friendly web applications. My work has spanned a
-                    variety of roles, from building fully customized websites
-                    from scratch to contributing to live products used by
-                    thousands. I excel in developing seamless user experiences
-                    using React, Next.js, and TypeScript, complemented by
-                    backend expertise in Node.js, Express.js, and databases like
-                    MongoDB and PostgreSQL. I also have hands-on experience
-                    with blockchain technologies, including integrating wallets,
-                    and building Web3-powered applications.
+                    I&apos;m <span className="name">Davit</span>, a front-end
+                    developer focused on building modern, responsive, and
+                    user-friendly web experiences. With 5+ years in the field,
+                    I deliver polished UI and scalable interfaces using{" "}
+                    <span className="tech">React, Next.js, and TypeScript</span>.
+                    I collaborate closely with product and backend teams and
+                    have hands-on experience integrating APIs, Node/Express
+                    services, and databases like MongoDB and PostgreSQL. I also
+                    build Web3 interfaces, including wallet integrations and
+                    blockchain-powered flows.
                   </Text>
 
                   <Box className="about-tags">

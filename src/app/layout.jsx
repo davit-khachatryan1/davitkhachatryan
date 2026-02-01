@@ -8,14 +8,14 @@ const siteUrl =
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Davit Khachatryan | Full-stack Developer",
+    default: "Davit Khachatryan | Front-end Developer",
     template: "%s | Davit Khachatryan",
   },
   description:
-    "Full-stack developer specializing in modern web apps, Web3, and product-driven UI. Explore Davit's portfolio, projects, and experience.",
+    "Front-end developer specializing in modern web apps, Web3, and product-driven UI. Explore Davit's portfolio, projects, and experience.",
   keywords: [
     "Davit Khachatryan",
-    "full-stack developer",
+    "front-end developer",
     "web developer",
     "JavaScript",
     "TypeScript",
@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "Davit Khachatryan | Full-stack Developer",
+    title: "Davit Khachatryan | Front-end Developer",
     description:
       "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
     siteName: "Davit Khachatryan",
@@ -50,7 +50,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Davit Khachatryan | Full-stack Developer",
+    title: "Davit Khachatryan | Front-end Developer",
     description:
       "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
     images: ["/images/profile.png"],
@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
     "@type": "Person",
     name: "Davit Khachatryan",
     url: siteUrl,
-    jobTitle: "Full-stack Developer",
+    jobTitle: "Front-end Developer",
     sameAs: [
       "https://github.com/davit-khachatryan1",
       "https://www.linkedin.com/in/davitkhachatryan11/",

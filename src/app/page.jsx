@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const options = {
       strings: [
-        "Full-stack JavaScript Developer",
+        "Front-end JavaScript Developer",
         "Web3 Product Builder",
         "UI-Focused Engineer",
       ],

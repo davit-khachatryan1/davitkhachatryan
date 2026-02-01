@@ -227,7 +227,7 @@ export const skillsGroups = [
 export const workData = [
   {
     company: "Freelance",
-    designation: "Full Stack Web3 Developer",
+    designation: "Front-end Web3 Developer",
     duration: "02/2024 - Present",
     companyImg: "freelance.jpeg",
     stacks: ["Wagmi", "Ethers.js", "Web3.js", "Solana Web3.js", "Solidity"],
@@ -266,7 +266,7 @@ export const workData = [
   },
   {
     company: "Optimum Partners",
-    designation: "Full-stack Developer",
+    designation: "Front-end Developer",
     duration: "02/2024 - 05/2024",
     companyImg: "optimum_partners.jpeg",
     stacks: [],
@@ -299,7 +299,7 @@ export const workData = [
   },
   {
     company: "Solicy",
-    designation: "Full-stack Developer",
+    designation: "Front-end Developer",
     duration: "09/2022 - 02/2024",
     companyImg: "solicy_logo.jpeg",
     stacks: ["JavaScript", "OpenAI API"],
@@ -332,7 +332,7 @@ export const workData = [
   },
   {
     company: "Upwork",
-    designation: "Full-stack Developer",
+    designation: "Front-end Developer",
     duration: "05/2019 - 09/2022",
     companyImg: "upwork.png",
     stacks: ["Web3", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
