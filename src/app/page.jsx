@@ -19,8 +19,6 @@ export default function Home() {
     const options = {
       strings: [
         "Front-end JavaScript Developer",
-        "Web3 Product Builder",
-        "UI-Focused Engineer",
       ],
       typeSpeed: 50,
       backSpeed: 35,

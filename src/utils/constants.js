@@ -182,7 +182,7 @@ export const skillsGroups = [
   {
     title: "Front-End Foundations",
     caption: "Semantic UI, modern styling, and reliable component patterns.",
-    items: ["HTML5", "CSS3", "Javascript", "Typescript", "SASS", "Bootstrap"],
+    items: ["HTML5", "CSS3", "Javascript", "Typescript", "SASS", "SCSS", "Less", "Tailwind", "Bootstrap"],
   },
   {
     title: "AI & AI Tools",
