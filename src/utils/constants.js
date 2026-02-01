@@ -191,11 +191,10 @@ export const skillsGroups = [
   },
   {
     title: "Modern Frameworks",
-    caption: "Production-ready front-end architecture and state.",
+    caption: "Production-ready front-end architecture and frameworks.",
     items: [
       "ReactJS",
       "NextJS",
-      "Redux",
       // "React Native",
       // "VueJS",
       // "Nuxt",
@@ -203,14 +202,9 @@ export const skillsGroups = [
     ],
   },
   {
-    title: "Back-End & APIs",
-    caption: "Node services with clean routing and scalable APIs.",
-    items: ["NodeJs", "Express"],
-  },
-  {
-    title: "Data & Storage",
-    caption: "Relational and document databases for app backbones.",
-    items: ["Postgres", "MongoDB"],
+    title: "State Management",
+    caption: "Predictable state management solutions for scalable applications.",
+    items: ["Redux", "Zustand"],
   },
   {
     title: "Web3 & Chain",
@@ -221,6 +215,16 @@ export const skillsGroups = [
     title: "Tooling & Workflow",
     caption: "Daily tooling that keeps delivery smooth.",
     items: ["Git", "Github", "Postman", "Bash"],
+  },
+  {
+    title: "Back-End & APIs (Less Experienced)",
+    caption: "Node services with clean routing and scalable APIs.",
+    items: ["NodeJs", "Express", "NestJS"],
+  },
+  {
+    title: "Data & Storage (Less Experienced)",
+    caption: "Relational and document databases for app backbones.",
+    items: ["Postgres", "MongoDB"],
   },
 ];
 
