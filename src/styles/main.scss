@@ -12,14 +12,14 @@
   }
 }
 
-$background-color: #0f1b35;
-$nav-container-color: rgba(24, 42, 76, 0.35);
-$nav-link-container-color: #1c2f55d5;
+$background-color: #142341;
+$nav-container-color: rgba(28, 46, 84, 0.35);
+$nav-link-container-color: #243965d5;
 $blue-400: #4299E1;
 $blue-500: #3182CE;
 $sub-header-color: #c7d2e8;
-$default-card-color: #17284d;
-$default-card-hover-color: #1f3a6b;
+$default-card-color: #1b2f5a;
+$default-card-hover-color: #234174;
 $mustard-yellow: #FFC436;
 $mustard-hover-yellow: #e1ae37;
 $instagram-pink: #D53F8C;
@@ -283,7 +283,7 @@ html.sr .load-hidden {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(18px);
-    background: linear-gradient(120deg, rgba(8, 16, 36, 0.95), rgba(4, 10, 28, 0.75));
+    background: linear-gradient(120deg, rgba(16, 28, 56, 0.95), rgba(10, 18, 40, 0.75));
     border-bottom: 1px solid rgba(100, 255, 218, 0.12);
 }
 

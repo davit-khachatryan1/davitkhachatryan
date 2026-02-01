@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="sr">
       <body
         style={{
-          backgroundColor: "#02001E",
+          backgroundColor: "#142341",
         }}
       >
         <Script
