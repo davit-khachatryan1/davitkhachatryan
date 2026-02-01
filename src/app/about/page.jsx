@@ -41,7 +41,7 @@ const Page = () => {
                 <Image
                   objectFit="cover"
                   src="/images/profile.png"
-                  alt="profile-image"
+                  alt="Davit Khachatryan - Front-end Developer and Web3 Specialist"
                   className="about-portrait"
                 />
                 <Text className="about-portrait-meta">

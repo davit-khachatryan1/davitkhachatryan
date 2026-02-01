@@ -26,7 +26,7 @@ import {
           <Box className="experience-logo">
             <Image
               src={`/images/${companyImg}`}
-              alt="Company Logo"
+              alt={`${company} company logo - ${designation}`}
               objectFit="cover"
             />
           </Box>

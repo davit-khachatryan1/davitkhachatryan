@@ -43,7 +43,7 @@ export default function Header() {
               <Image
                 objectFit="cover"
                 src="/images/ar-profile-transformed.png"
-                alt="profile-image"
+                alt="Davit Khachatryan"
                 w="100%"
                 h="100%"
                 borderRadius="full"

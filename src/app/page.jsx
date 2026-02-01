@@ -47,7 +47,7 @@ export default function Home() {
               <Image
                 objectFit="cover"
                 src="/images/ar-profile-transformed.png"
-                alt="profile-image"
+                alt="Davit Khachatryan - Front-end Developer Portfolio"
               />
             </Box>
           </RevealWrapper>

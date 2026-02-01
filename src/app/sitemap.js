@@ -3,12 +3,12 @@ const siteUrl =
 
 export default function sitemap() {
   const routes = [
-    { path: "/", priority: 1 },
-    { path: "/about", priority: 0.8 },
-    { path: "/skills", priority: 0.8 },
-    { path: "/projects", priority: 0.8 },
-    { path: "/experience", priority: 0.8 },
-    { path: "/resume", priority: 0.6 },
+    { path: "/", priority: 1.0, changeFrequency: "weekly" },
+    { path: "/about", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/skills", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/projects", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/experience", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/resume", priority: 0.7, changeFrequency: "monthly" },
   ];
 
   const now = new Date();
@@ -16,7 +16,7 @@ export default function sitemap() {
   return routes.map((route) => ({
     url: `${siteUrl}${route.path}`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 }

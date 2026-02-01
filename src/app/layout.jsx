@@ -12,18 +12,26 @@ export const metadata = {
     template: "%s | Davit Khachatryan",
   },
   description:
-    "Front-end developer specializing in modern web apps, Web3, and product-driven UI. Explore Davit's portfolio, projects, and experience.",
+    "Davit Khachatryan - Front-end Developer with 5+ years of experience building high-performance web applications. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development. View portfolio, projects, and professional experience.",
   keywords: [
     "Davit Khachatryan",
     "front-end developer",
+    "front end developer",
     "web developer",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
+    "JavaScript developer",
+    "TypeScript developer",
+    "React developer",
+    "Next.js developer",
+    "React.js developer",
     "Node.js",
-    "Web3",
+    "Web3 developer",
+    "blockchain developer",
+    "UI developer",
     "portfolio",
+    "software engineer",
+    "full stack developer",
+    "web3 engineer",
+    "AI developer",
   ],
   authors: [{ name: "Davit Khachatryan", url: siteUrl }],
   creator: "Davit Khachatryan",
@@ -34,26 +42,28 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    url: "/",
-    title: "Davit Khachatryan | Front-end Developer",
+    url: siteUrl,
+    title: "Davit Khachatryan | Front-end Developer | Web3 & React Specialist",
     description:
-      "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
+      "Front-end Developer with 5+ years of experience. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development. View portfolio, projects, and professional experience.",
     siteName: "Davit Khachatryan",
+    locale: "en_US",
     images: [
       {
-        url: "/images/profile.png",
+        url: `${siteUrl}/images/profile.png`,
         width: 1200,
         height: 630,
-        alt: "Davit Khachatryan",
+        alt: "Davit Khachatryan - Front-end Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Davit Khachatryan | Front-end Developer",
+    title: "Davit Khachatryan | Front-end Developer | Web3 & React Specialist",
     description:
-      "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
-    images: ["/images/profile.png"],
+      "Front-end Developer with 5+ years of experience. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development.",
+    images: [`${siteUrl}/images/profile.png`],
+    creator: "@davitkhachatryan", // Add your Twitter handle if you have one
   },
   robots: {
     index: true,
@@ -84,10 +94,28 @@ export default function RootLayout({ children }) {
     name: "Davit Khachatryan",
     url: siteUrl,
     jobTitle: "Front-end Developer",
+    description: "Front-end Developer with 5+ years of experience specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development",
+    knowsAbout: [
+      "Front-end Development",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Web3",
+      "Blockchain",
+      "UI/UX Design",
+      "Node.js",
+      "AI Development",
+    ],
+    alumniOf: {
+      "@type": "Organization",
+      name: "Software Development",
+    },
     sameAs: [
       "https://github.com/davit-khachatryan1",
       "https://www.linkedin.com/in/davitkhachatryan11/",
     ],
+    image: `${siteUrl}/images/profile.png`,
   };
 
   return (

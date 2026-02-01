@@ -58,7 +58,7 @@ const ProjectCard = (props) => {
           <Image
             objectFit="cover"
             src={`images/${image}.png`}
-            alt="project-img"
+            alt={`${title} - ${type} project built with ${stacks.slice(0, 3).join(', ')}`}
             loading="lazy"
           />
           <Box className="project-tile__type">{type}</Box>
@@ -123,7 +123,7 @@ const ProjectCard = (props) => {
               <Box className="project-modal__thumb">
                 <Image
                   src={`images/${image}.png`}
-                  alt="project-img"
+                  alt={`${title} project screenshot`}
                   objectFit="cover"
                 />
               </Box>
