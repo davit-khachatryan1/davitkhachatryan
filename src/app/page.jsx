@@ -66,8 +66,7 @@ export default function Home() {
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={700}>
             <Text className="home-hero__subtitle">
-              Building scalable web experiences with modern stacks and Web3
-              tooling.
+              Building scalable web experiences with modern stacks and masterfully leveraging AI to enhance development workflows.
             </Text>
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={800}>
