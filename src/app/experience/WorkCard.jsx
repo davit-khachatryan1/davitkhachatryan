@@ -8,10 +8,11 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-const WorkCard = (props) => {
+  const WorkCard = (props) => {
   const { company, duration, designation, companyImg, description } =
     props.data;
   const { index } = props;
+  const stacks = props.data.stacks || [];
   const isCurrent =
     typeof duration === "string" &&
     duration.toLowerCase().includes("present");
@@ -21,12 +22,7 @@ const WorkCard = (props) => {
         className="experience-card"
         style={{ "--delay": `${(index || 0) * 90}ms` }}
       >
-        <Flex
-          className="experience-card__inner"
-          flexDirection={["column", "column", "row"]}
-          alignItems={["flex-start", "flex-start", "flex-start"]}
-          gap={{ base: 3, md: 4 }}
-        >
+        <Box className="experience-card__inner">
           <Box className="experience-logo">
             <Image
               src={`/images/${companyImg}`}
@@ -46,8 +42,20 @@ const WorkCard = (props) => {
               </Box>
             </Box>
             <Box className="experience-description">{description}</Box>
+            {stacks.length > 0 && (
+              <Box className="experience-stacks">
+                <Text className="experience-stacks__title">Stacks & Tools</Text>
+                <Box className="experience-stacks__list">
+                  {stacks.map((stack) => (
+                    <Text as="span" className="experience-stack-chip" key={stack}>
+                      {stack}
+                    </Text>
+                  ))}
+                </Box>
+              </Box>
+            )}
           </Box>
-        </Flex>
+        </Box>
       </Box>
     </>
   );

@@ -230,6 +230,7 @@ export const workData = [
     designation: "Full Stack Web3 Developer",
     duration: "02/2024 - Present",
     companyImg: "freelance.jpeg",
+    stacks: ["Wagmi", "Ethers.js", "Web3.js", "Solana Web3.js", "Solidity"],
     description: (
       <>
         <ul>
@@ -268,6 +269,7 @@ export const workData = [
     designation: "Full-stack Developer",
     duration: "02/2024 - 05/2024",
     companyImg: "optimum_partners.jpeg",
+    stacks: [],
     description: (
       <>
         <ul>
@@ -300,6 +302,7 @@ export const workData = [
     designation: "Full-stack Developer",
     duration: "09/2022 - 02/2024",
     companyImg: "solicy_logo.jpeg",
+    stacks: ["JavaScript", "OpenAI API"],
     description: (
       <>
         <ul>
@@ -332,6 +335,7 @@ export const workData = [
     designation: "Full-stack Developer",
     duration: "05/2019 - 09/2022",
     companyImg: "upwork.png",
+    stacks: ["Web3", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
     description: (
       <>
         <ul>
