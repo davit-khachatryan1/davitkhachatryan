@@ -17,7 +17,7 @@ const Page = () => {
     "Front-end",
     "React/Next.js",
     "TypeScript",
-    "Node.js",
+    "AI",
     "Web3",
   ];
 
