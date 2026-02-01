@@ -34,8 +34,8 @@ export default function DrawerComponent({
         <DrawerContent
           alignItems="center"
           className="nav-drawer"
-          bg="rgba(8, 14, 30, 0.95)"
-          borderLeft="1px solid rgba(100, 255, 218, 0.18)"
+          bg="rgba(24, 30, 40, 0.95)"
+          borderLeft="1px solid rgba(95, 196, 184, 0.18)"
           backdropFilter="blur(16px)"
         >
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />

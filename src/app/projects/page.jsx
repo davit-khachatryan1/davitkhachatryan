@@ -13,17 +13,20 @@ import { projectsData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 
 const Projects = () => {
-  const [selectedData, setSelectedData] = useState(projectsData);
+  const stackOptions = ["React", "Next.js", "Node.js"];
+
+  const [selectedData, setSelectedData] = useState(() => {
+    const initial = stackOptions[0];
+    return projectsData.filter((data) => data.stacks.includes(initial));
+  });
+
   const valSelectFn = (value) =>
     setSelectedData(() => {
-      return value === "ALL"
-        ? projectsData
-        : projectsData.filter((data) => data.type === value);
+      return projectsData.filter((data) => data.stacks.includes(value));
     });
-  const options = ["ALL", "WEB-APP"];
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "project",
-    defaultValue: "ALL",
+    defaultValue: stackOptions[0],
     onChange: valSelectFn,
   });
   const group = getRootProps();
@@ -37,7 +40,7 @@ const Projects = () => {
 
         <Box {...group} className="projects-filter">
           <HStack className="projects-filter__stack">
-            {options.map((value) => {
+            {stackOptions.map((value) => {
               const radio = getRadioProps({ value });
               return (
                 <RadioCard key={value} {...radio}>

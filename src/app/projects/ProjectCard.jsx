@@ -116,7 +116,7 @@ const ProjectCard = (props) => {
       </Box>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} size="xl" isCentered>
-        <ModalOverlay backdropFilter="blur(8px)" bg="rgba(6, 10, 22, 0.7)" />
+        <ModalOverlay backdropFilter="blur(8px)" bg="rgba(18, 22, 30, 0.7)" />
         <ModalContent className="project-modal">
           <ModalHeader className="project-modal__header">
             <HStack spacing={4} align="center">

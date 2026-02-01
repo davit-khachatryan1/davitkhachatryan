@@ -15,19 +15,19 @@ export function Providers({
       colors: {
         blueTheme: {
           // current active theme
-          bg: "#142341",
-          navBg: "rgba(23, 38, 72, 0.82)",
-          navLinkActive:"#5eead4",
-          navShadow:"rgba(10,16,32,0.55)",
-          card:"#1b2f5a",
-          cardHover:"#234174"
+          bg: "#1b212c",
+          navBg: "rgba(27, 34, 45, 0.82)",
+          navLinkActive:"#f6c453",
+          navShadow:"rgba(10,12,18,0.55)",
+          card:"#222b38",
+          cardHover:"#2d3747"
         },
         defaultTheme:{
-          bg: "#142341",
-          navBg: "rgba(28, 46, 84, 0.55)",
-          navLinkActive:"#5eead4",
-          card:"#203666",
-          cardHover:"#28477b"
+          bg: "#1b212c",
+          navBg: "rgba(27, 34, 45, 0.7)",
+          navLinkActive:"#f6c453",
+          card:"#242f3c",
+          cardHover:"#2f3c4f"
         },
         hover:{
           gray:"rgba(0, 0, 0, 0.6)"
