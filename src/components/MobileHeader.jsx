@@ -23,6 +23,9 @@ export default function MobileHeader({ pathname }) {
         icon={<IoMdMenu size="22px" />}
         className="mobile-menu-btn"
         variant="unstyled"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       />
 
       <DrawerComponent
