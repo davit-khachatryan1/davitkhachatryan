@@ -36,7 +36,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiExpress, SiPostman, SiGnubash, SiNextdotjs } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
 import { BsCodeSlash, BsRobot, BsGit, BsMarkdown } from "react-icons/bs";
-import { GiArtificialIntelligence } from "react-icons/gi";
+import { GiArtificialIntelligence, GiSoccerBall, GiTennisRacket, GiChessKing, GiGamepad } from "react-icons/gi";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -58,12 +58,20 @@ export const interestsData = [
     icon: GiArtificialIntelligence,
   },
   {
-    interest: "Software Engineering",
-    icon: BsCodeSlash,
+    interest: "Football",
+    icon: GiSoccerBall,
   },
   {
-    interest: "Software Development",
-    icon: AiFillCode,
+    interest: "Tennis",
+    icon: GiTennisRacket,
+  },
+  {
+    interest: "Intellectual Games",
+    icon: GiChessKing,
+  },
+  {
+    interest: "Video Games",
+    icon: GiGamepad,
   },
 ];
 

@@ -56,16 +56,11 @@ const Page = () => {
                     👋 Hey there
                   </Heading>
                   <Text className="about-paragraph">
-                    I&apos;m <span className="name">Davit</span>, a front-end
-                    developer focused on building modern, responsive, and
-                    user-friendly web experiences. With 5+ years in the field,
-                    I deliver polished UI and scalable interfaces using{" "}
-                    <span className="tech">React, Next.js, and TypeScript</span>.
-                    I collaborate closely with product and backend teams and
-                    have hands-on experience integrating APIs, Node/Express
-                    services, and databases like MongoDB and PostgreSQL. I also
-                    build Web3 interfaces, including wallet integrations and
-                    blockchain-powered flows.
+                    I&apos;m <span className="name">Davit</span>, a Front-End Developer with over 5 years of experience building high-performance, responsive, and user-centric web applications. A forward-thinking developer who excels at <span className="tech">AI-assisted development</span>, leveraging <span className="tech">AI-enhanced</span> workflows to optimize code quality, accelerate delivery cycles, and drive informed technical decisions.
+                  </Text>
+
+                  <Text className="about-paragraph">
+                    Proven expertise in delivering polished UI and scalable front-end architectures through seamless API integrations and close collaboration with cross-functional teams. Experienced in implementing Web3 features, including multi-wallet support and secure transaction pipelines, with a focus on intuitive user states and robust error handling. Committed to shipping end-to-end features that combine technical excellence with a superior user experience.
                   </Text>
 
                   <Box className="about-tags">
@@ -75,12 +70,6 @@ const Page = () => {
                       </Text>
                     ))}
                   </Box>
-
-                  <Text className="about-paragraph">
-                    📫 Open to collaborations and exciting projects, I&apos;m
-                    eager to connect with fellow developers and tech enthusiasts.
-                    Let&apos;s build something amazing together!
-                  </Text>
                   <Text className="about-signoff">Happy coding! 🖥️</Text>
                 </Box>
               </Box>
