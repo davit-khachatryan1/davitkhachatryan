@@ -2,30 +2,101 @@ import Favicon from "/public/images/favicon.png";
 import ClientRootLayout from "../components/ClientRootLayout";
 import Script from "next/script";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://davitkhachatryan.vercel.app";
+
 export const metadata = {
-  title: "Davit Khachatryan | Software Engineer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Davit Khachatryan | Full-stack Developer",
+    template: "%s | Davit Khachatryan",
+  },
   description:
-  "Welcome to Davit's Software Engineering Portfolio. Explore a diverse range of projects and see how I can bring your ideas to life. Let's connect and discuss your next venture!",
+    "Full-stack developer specializing in modern web apps, Web3, and product-driven UI. Explore Davit's portfolio, projects, and experience.",
   keywords: [
+    "Davit Khachatryan",
+    "full-stack developer",
+    "web developer",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Web3",
     "portfolio",
-    "app",
-    "next.js 13",
-    "sass",
-    "scss",
-    "react",
-    "chakra",
-    "best portfolio",
   ],
-    icons: [{
-    rel: 'icon',
-    url: Favicon.src,
-  }]
+  authors: [{ name: "Davit Khachatryan", url: siteUrl }],
+  creator: "Davit Khachatryan",
+  publisher: "Davit Khachatryan",
+  category: "Technology",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Davit Khachatryan | Full-stack Developer",
+    description:
+      "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
+    siteName: "Davit Khachatryan",
+    images: [
+      {
+        url: "/images/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Davit Khachatryan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Davit Khachatryan | Full-stack Developer",
+    description:
+      "Modern web apps, Web3, and product-driven UI. View Davit's projects, skills, and experience.",
+    images: ["/images/profile.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: [
+    { rel: "icon", url: Favicon.src },
+    { rel: "apple-touch-icon", url: Favicon.src },
+  ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Davit Khachatryan",
+    url: siteUrl,
+    jobTitle: "Full-stack Developer",
+    sameAs: [
+      "https://github.com/davit-khachatryan1",
+      "https://www.linkedin.com/in/davitkhachatryan11/",
+    ],
+  };
+
   return (
     <html lang="en" className="sr">
       <body className="body-theme">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
