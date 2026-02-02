@@ -4,7 +4,7 @@ const siteUrl =
 export const metadata = {
   title: "Experience | Davit Khachatryan",
   description:
-    "Professional experience of Davit Khachatryan. 5+ years as a Front-end Developer working on Web3 projects, fintech applications, and modern web platforms. Experience at Freelance, Optimum Partners, Solicy, and Upwork.",
+    "Professional experience of Davit Khachatryan. 5+ years as a Front-end Developer working on Web3 projects, fintech applications, and modern web platforms. Experience at ODev Tech, Optimum Partners, Solicy, and Upwork.",
   keywords: [
     "Davit Khachatryan experience",
     "front-end developer experience",

@@ -238,11 +238,11 @@ export const skillsGroups = [
 
 export const workData = [
   {
-    company: "Freelance",
+    company: "ODev Tech",
     designation: "Front-end Web3 Developer",
-    duration: "02/2024 - Present",
-    companyImg: "freelance.jpeg",
-    stacks: ["Wagmi", "Ethers.js", "Web3.js", "Solana Web3.js", "Solidity"],
+    duration: "08/2024 - Present",
+    companyImg: "odev.png",
+    stacks: ["Wagmi", "Ethers.js", "Web3.js", "Solana Web3.js", "React", "Firebase", "Vite", "Codex", "Cursor", "Claude Code", "Prompt Engineering"],
     description: (
       <>
         <ul>
@@ -271,7 +271,28 @@ export const workData = [
             support multi-chain interactions, enhancing blockchain
             interoperability.
           </li>
-          <li>Started learning Solidity.</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    company: "Kontainer",
+    designation: "Front-end Developer",
+    duration: "05/2024 - 09/2024",
+    companyImg: "kontainerlogo.png",
+    stacks: ["Vue", "Nuxt 3", "Node.js", "MongoDB", "Express"],
+    description: (
+      <>
+        <ul>
+          <li>
+            Created UI components with reusable codes for a better user experience.
+          </li>
+          <li>
+            Monitored application performance metrics and troubleshot any technical issues encountered during development.
+          </li>
+          <li>
+            Recommended and implemented performance improvements.
+          </li>
         </ul>
       </>
     ),
@@ -281,7 +302,7 @@ export const workData = [
     designation: "Front-end Developer",
     duration: "02/2024 - 05/2024",
     companyImg: "optimum_partners.jpeg",
-    stacks: [],
+    stacks: ["Angular", "JavaScript", "Material UI", "Scrum", "Kanban"],
     description: (
       <>
         <ul>
@@ -314,7 +335,7 @@ export const workData = [
     designation: "Front-end Developer",
     duration: "09/2022 - 02/2024",
     companyImg: "solicy_logo.jpeg",
-    stacks: ["JavaScript", "OpenAI API"],
+    stacks: ["React", "Vue", "Nuxt", "JavaScript", "Next.js", "Node.js", "NestJS", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
     description: (
       <>
         <ul>
@@ -347,7 +368,7 @@ export const workData = [
     designation: "Front-end Developer",
     duration: "05/2019 - 09/2022",
     companyImg: "upwork.png",
-    stacks: ["Web3", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
+    stacks: ["React", "Web3", "OpenAI API", "CSS", "HTML", "Bootstrap", "Tailwind CSS"],
     description: (
       <>
         <ul>
@@ -381,7 +402,7 @@ export const projectsData = [
     link: "https://kontainer.com/da",
     source: null,
     description: "A comprehensive container management platform that helps businesses streamline their shipping and logistics operations. Features include real-time tracking, inventory management, and automated documentation processing.",
-    stacks: ["React", "Node.js", "MongoDB", "Express", "Docker", "AWS"],
+    stacks: ["Vue", "Nuxt 3", "Node.js", "MongoDB", "Express", "Docker", "AWS"],
   },
   {
     type: "WEB-APP",
@@ -399,7 +420,7 @@ export const projectsData = [
     link: "https://dequity.io/?utm_content=light",
     source: null,
     description: "Decentralized equity platform enabling tokenization of traditional assets. Built for democratizing investment opportunities through blockchain technology and smart contracts.",
-    stacks: ["React", "Web3.js", "Ethereum", "Solidity", "IPFS", "Hardhat"],
+    stacks: ["React", "TypeScript", "Web3.js", "Ethers.js", "Tailwind CSS"],
   },
   {
     type: "WEB-APP",
@@ -408,7 +429,7 @@ export const projectsData = [
     link: "https://blocknite.vercel.app/",
     source: null,
     description: "Blockchain-based gaming platform combining NFT technology with interactive gaming experiences. Features include digital asset ownership, play-to-earn mechanics, and cross-game interoperability.",
-    stacks: ["Next.js", "Solana", "Web3.js", "Three.js", "IPFS", "Vercel"],
+    stacks: ["Next.js", "TypeScript", "Web3.js", "Tailwind CSS", "Vercel"],
   },
   {
     type: "WEB-APP",
@@ -417,7 +438,7 @@ export const projectsData = [
     link: "https://youmeme.com/",
     source: null,
     description: "Social media platform focused on meme creation and sharing. Implements AI-powered content generation, viral analytics, and community-driven content curation with monetization features.",
-    stacks: ["React", "Node.js", "PostgreSQL", "Redis", "AWS S3", "OpenAI API"],
+    stacks: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS S3", "OpenAI API", "Tailwind CSS"],
   },
   {
     type: "WEB-APP",
@@ -426,7 +447,7 @@ export const projectsData = [
     link: "https://parallelmarkets.com/?utm_source=passbase.com",
     source: null,
     description: "Identity verification and KYC platform for financial institutions. Provides secure, compliant user onboarding with advanced fraud detection and regulatory compliance tools.",
-    stacks: ["React", "Python", "Django", "PostgreSQL", "AWS", "Machine Learning"],
+    stacks: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
   },
   {
     type: "WEB-APP",
@@ -435,7 +456,7 @@ export const projectsData = [
     link: "https://www.cryptopool.money/",
     source: null,
     description: "Liquidity pool platform for cryptocurrency trading and yield farming. Features automated market making, impermanent loss protection, and multi-chain support for DeFi protocols.",
-    stacks: ["React", "Solidity", "Web3.js", "The Graph", "IPFS", "Polygon"],
+    stacks: ["React", "TypeScript", "Web3.js", "Ethers.js", "Tailwind CSS"],
   },
   {
     type: "WEB-APP",
@@ -444,7 +465,7 @@ export const projectsData = [
     link: "https://raize-front.web.app/",
     source: null,
     description: "Crowdfunding platform connecting innovative startups with investors. Includes project discovery, investment tracking, milestone-based funding, and comprehensive analytics dashboard.",
-    stacks: ["Vue.js", "Firebase", "Stripe API", "Chart.js", "Node.js", "MongoDB"],
+    stacks: ["Next.js", "Node.js", "NestJS", "Firebase", "Stripe API", "Chart.js", "MongoDB"],
   },
 ];
 
