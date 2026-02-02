@@ -50,7 +50,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: `${siteUrl}/images/profile.png`,
+        url: `${siteUrl}/images/ar-profile-transformed.png`,
         width: 1200,
         height: 630,
         alt: "Davit Khachatryan - Front-end Developer",
@@ -62,7 +62,7 @@ export const metadata = {
     title: "Davit Khachatryan | Front-end Developer | Web3 & React Specialist",
     description:
       "Front-end Developer with 5+ years of experience. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development.",
-    images: [`${siteUrl}/images/profile.png`],
+    images: [`${siteUrl}/images/ar-profile-transformed.png`],
     creator: "@davitkhachatryan", // Add your Twitter handle if you have one
   },
   robots: {
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
       "https://github.com/davit-khachatryan1",
       "https://www.linkedin.com/in/davitkhachatryan11/",
     ],
-    image: `${siteUrl}/images/profile.png`,
+    image: `${siteUrl}/images/ar-profile-transformed.png`,
   };
 
   return (
