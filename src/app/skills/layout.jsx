@@ -20,6 +20,21 @@ export const metadata = {
       "Technical skills in React, Next.js, TypeScript, Web3, and modern web development technologies.",
     url: `${siteUrl}/skills`,
     type: "website",
+    images: [
+      {
+        url: `${siteUrl}/images/ar-profile-transformed.png`,
+        width: 1200,
+        height: 630,
+        alt: "Davit Khachatryan - Front-end Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skills | Davit Khachatryan - Front-end Developer",
+    description:
+      "Technical skills in React, Next.js, TypeScript, Web3, and modern web development technologies.",
+    images: [`${siteUrl}/images/ar-profile-transformed.png`],
   },
   alternates: {
     canonical: "/skills",

@@ -19,6 +19,21 @@ export const metadata = {
       "5+ years of professional experience as a Front-end Developer specializing in Web3, React, and modern web applications.",
     url: `${siteUrl}/experience`,
     type: "profile",
+    images: [
+      {
+        url: `${siteUrl}/images/ar-profile-transformed.png`,
+        width: 1200,
+        height: 630,
+        alt: "Davit Khachatryan - Front-end Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Experience | Davit Khachatryan - Front-end Developer",
+    description:
+      "5+ years of professional experience as a Front-end Developer specializing in Web3, React, and modern web applications.",
+    images: [`${siteUrl}/images/ar-profile-transformed.png`],
   },
   alternates: {
     canonical: "/experience",
