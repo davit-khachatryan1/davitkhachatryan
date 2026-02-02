@@ -410,7 +410,7 @@ export const workData = [
   {
     company: "Upwork",
     designation: "Junior Front-end Developer",
-    duration: "05/2020 - 09/2021",
+    duration: "09/2020 - 09/2021",
     companyImg: "upwork.png",
     stacks: ["React", "CSS", "HTML", "Bootstrap", "Tailwind CSS"],
     description: (
