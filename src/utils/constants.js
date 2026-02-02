@@ -288,7 +288,7 @@ export const workData = [
   },
   {
     company: "Kontainer",
-    designation: "Front-end Developer",
+    designation: "Front-end Developer (Contract)",
     duration: "05/2024 - 09/2024",
     companyImg: "kontainerlogo.png",
     stacks: ["Vue", "Nuxt 3", "Node.js", "MongoDB", "Express"],
