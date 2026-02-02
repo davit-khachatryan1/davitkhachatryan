@@ -42,6 +42,7 @@ const FALL_DURATION = 3;
 const FloatingStackIcons = () => {
   const [icons, setIcons] = useState([]);
   const containerRef = useRef(null);
+  const [animationsReady, setAnimationsReady] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -242,7 +243,7 @@ const FloatingStackIcons = () => {
         will-change: transform;
       }
       .floating-icon.falling {
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
         animation-iteration-count: 1;
       }
       .floating-icon.landed {
@@ -261,6 +262,14 @@ const FloatingStackIcons = () => {
     };
   }, [icons]);
 
+  useEffect(() => {
+    if (animationsReady || icons.length === 0) return;
+    const frame = window.requestAnimationFrame(() => {
+      setAnimationsReady(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [animationsReady, icons.length]);
+
   return (
     <Box
       ref={containerRef}
@@ -272,6 +281,7 @@ const FloatingStackIcons = () => {
       pointerEvents="none"
       zIndex={2}
       overflow="hidden"
+      visibility={animationsReady ? "visible" : "hidden"}
     >
       {icons.map((icon) => {
         const IconComponent = icon.IconComponent;
@@ -313,7 +323,9 @@ const FloatingStackIcons = () => {
                 ? {
                     transform: `translateY(-${icon.fallDistance}px)`,
                     opacity: 0,
-                    animation: `fallDown${icon.id} ${icon.fallDuration}s linear ${icon.fallDelay}s forwards`,
+                    animation: animationsReady
+                      ? `fallDown${icon.id} ${icon.fallDuration}s linear ${icon.fallDelay}s forwards`
+                      : "none",
                   }
                 : icon.hasLanded
                 ? {

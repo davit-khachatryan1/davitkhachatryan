@@ -242,34 +242,40 @@ export const workData = [
     designation: "Front-end Web3 Developer",
     duration: "08/2024 - Present",
     companyImg: "odev.png",
-    stacks: ["Wagmi", "Ethers.js", "Web3.js", "Solana Web3.js", "React", "Firebase", "Vite", "Codex", "Cursor", "Claude Code", "Prompt Engineering"],
+    stacks: ["Wagmi", "Viem", "Ethers.js", "@solana/web3.js", "@reown/appkit", "bitcoinjs-lib", "React", "Firebase", "Vite"],
     description: (
       <>
         <ul>
           <li>
-            Helped teams build programs and systems, serving business needs.
-          </li>
-          <li>Implemented Web3 solutions into front-end.</li>
-          <li>
-            Fully covered front-end implementations from blockchain and Web3
-            tools into NFT minting app.
+            Developed front-end interfaces and user experiences for cutting-edge DeFi platforms, 
+            including GVNR—a protocol focused on unlocking trillions in liquidity by 
+            empowering developers to mobilize BTC and remove barriers between blockchains.
           </li>
           <li>
-            Worked closely with business stakeholders to identify requirements
-            and develop solutions accordingly.
+            Built front-end components and UI for comprehensive BTCFi lending platform (Diamond Hands), 
+            implementing user interfaces that enable users to collateralize native Bitcoin on-chain, 
+            mint stablecoins backed by self-custodied Bitcoin, and manage loans with intuitive 
+            wallet integration flows.
           </li>
           <li>
-            Troubleshot minor problems and reported larger technical issues.
+            Implemented client-side multi-chain Web3 integrations supporting Bitcoin, Ethereum, and Solana 
+            blockchains using specialized libraries including bitcoinjs-lib, Ethers.js, Viem, 
+            and Solana Web3.js, creating seamless cross-chain user experiences in the front-end.
           </li>
           <li>
-            Used Web3 tools such as wagmi, ethers.js, and others to integrate
-            blockchain functionality. Worked with Ethereum-based solutions,
-            interacting with smart contracts and handling transactions, as well
-            as utilizing Solana Web3.js library for interacting with the Solana
-            blockchain, enabling seamless wallet integration, transaction
-            signing, and token management. Integrated various Web3 tools to
-            support multi-chain interactions, enhancing blockchain
-            interoperability.
+            Integrated advanced wallet connectivity solutions using Reown AppKit in React applications, 
+            enabling seamless multi-chain wallet support with Bitcoin, Ethereum, and Solana adapters 
+            through intuitive UI components and connection flows.
+          </li>
+          <li>
+            Developed front-end smart contract interaction layers with React hooks and components, 
+            handling complex transaction flows, token management displays, and cross-chain operations 
+            with comprehensive error handling and user feedback UI.
+          </li>
+          <li>
+            Collaborated with cross-functional teams and stakeholders to translate business 
+            requirements into scalable front-end solutions, ensuring alignment between 
+            product vision and user interface implementation.
           </li>
         </ul>
       </>
@@ -285,13 +291,31 @@ export const workData = [
       <>
         <ul>
           <li>
-            Created UI components with reusable codes for a better user experience.
+            Built reusable UI components to speed delivery and improve the overall
+            user experience.
           </li>
           <li>
-            Monitored application performance metrics and troubleshot any technical issues encountered during development.
+            Upgraded the product from Nuxt 1 to Nuxt 3 and resolved Node.js
+            version upgrade challenges during the migration.
           </li>
           <li>
-            Recommended and implemented performance improvements.
+            Our platform reduces time to market by streamlining asset retrieval,
+            accurate content sharing, and linking data across systems, supported
+            by an expert team and user-friendly technology.
+          </li>
+          <li>
+            Kontainer provides digital asset management (DAM) and product
+            information management (PIM) solutions that help businesses organize,
+            manage, and share digital assets securely and efficiently.
+          </li>
+          <li>
+            Served industries including fashion, luxury goods, media,
+            entertainment, and manufacturing to streamline digital workflows
+            and enhance collaboration.
+          </li>
+          <li>
+            Operated with a global presence, working with offices and partners
+            worldwide to deliver localized support for businesses of all sizes.
           </li>
         </ul>
       </>
@@ -306,25 +330,35 @@ export const workData = [
     description: (
       <>
         <ul>
-          <li>Working with US-based clients in an international setting. ·</li>
           <li>
-            Taking part in client meetings and demos to demonstrate product
-            features and gain insights.
+            Developed front-end interfaces and components for Forbes website, implementing 
+            responsive designs and interactive features using Angular and Material UI to 
+            enhance user engagement and content delivery for one of the world&apos;s leading 
+            business media platforms.
           </li>
           <li>
-            Participating in sprint planning, sprint reviews, daily stand-ups,
-            and other Agile rituals. ·
+            Built reusable UI components and implemented front-end features for international 
+            newspaper websites, creating intuitive interfaces and tools that improved content 
+            management and user experience.
           </li>
           <li>
-            I am collaborating with Product Owners, Scrum Masters, and team
-            members to prioritize tasks and deliver features.
+            Worked with US-based clients in an international setting, collaborating with 
+            geographically diverse teams and stakeholders to deliver high-quality front-end 
+            solutions.
           </li>
           <li>
-            I am working with geographically diverse teams and stakeholders.
+            Participated in client meetings and demos to demonstrate product features, gather 
+            feedback, and align front-end implementations with business requirements.
           </li>
           <li>
-            I&apos;m working on international newspaper&apos;s website and
-            it&apos;s providing tools.
+            Collaborated with Product Owners, Scrum Masters, and team members in Agile 
+            environments (Scrum/Kanban), participating in sprint planning, daily stand-ups, 
+            and sprint reviews to prioritize tasks and deliver features efficiently.
+          </li>
+          <li>
+            Troubleshot front-end issues and optimized Angular applications for performance, 
+            ensuring smooth user interactions and fast load times across different devices 
+            and browsers.
           </li>
         </ul>
       </>
@@ -332,7 +366,7 @@ export const workData = [
   },
   {
     company: "Solicy",
-    designation: "Front-end Developer",
+    designation: "Full-stack Developer",
     duration: "09/2022 - 02/2024",
     companyImg: "solicy_logo.jpeg",
     stacks: ["React", "Vue", "Nuxt", "JavaScript", "Next.js", "Node.js", "NestJS", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
@@ -340,24 +374,34 @@ export const workData = [
       <>
         <ul>
           <li>
-            Developing and maintaining web and mobile applications using
-            JavaScript, and other relevant programming languages and frameworks.
+            Developed full-stack Web3 applications, building both front-end interfaces 
+            and back-end services for blockchain-based projects, primarily focusing on 
+            DeFi platforms and token investment systems.
           </li>
           <li>
-            Implementing responsive design and cross-browser compatibility
-            ensures that applications work effectively on all devices and
-            platforms.
+            Built and maintained RESTful APIs and server-side logic using Node.js and 
+            NestJS, handling data processing, authentication, and integration with 
+            blockchain networks and external services.
           </li>
           <li>
-            Troubleshooting and debugging frontend code to ensure it works
-            properly across different devices and platforms.
+            Created responsive front-end applications using React, Vue, Nuxt, and Next.js, 
+            implementing Web3 wallet integrations, smart contract interactions, and 
+            real-time data visualization for cryptocurrency and token trading platforms.
           </li>
           <li>
-            Some big projects I&apos;ve worked on are the back-end and front-end
-            parts of the Fintech project designed for investing with tokens and
-            coins, a document generator project that used the OpenAI API, an
-            online travel agency&apos;s website, and a state-of-the-art social
-            network platform designed to deliver joy on demand.
+            Integrated third-party APIs including OpenAI API for AI-powered document 
+            generation, Alpha Vantage API and Yahoo Finance API for real-time financial 
+            data and market analytics in Fintech applications.
+          </li>
+          <li>
+            Developed full-stack solutions for various projects including a Fintech platform 
+            for investing with tokens and coins, an AI-powered document generator, an 
+            online travel agency website, and a social network platform.
+          </li>
+          <li>
+            Implemented end-to-end features from database design to API development and 
+            front-end implementation, ensuring seamless integration between client and 
+            server-side components while maintaining code quality and performance.
           </li>
         </ul>
       </>
@@ -365,28 +409,40 @@ export const workData = [
   },
   {
     company: "Upwork",
-    designation: "Front-end Developer",
+    designation: "Junior Front-end Developer",
     duration: "05/2019 - 09/2022",
     companyImg: "upwork.png",
-    stacks: ["React", "Web3", "OpenAI API", "CSS", "HTML", "Bootstrap", "Tailwind CSS"],
+    stacks: ["React", "CSS", "HTML", "Bootstrap", "Tailwind CSS"],
     description: (
       <>
         <ul>
           <li>
-            Involved in project plan meetings with clients, and team members to
-            analyze business requirements.
+            Developed reusable UI components and user interfaces using React, HTML, 
+            CSS, Bootstrap, and Tailwind CSS, focusing on creating responsive and 
+            visually appealing layouts for various web applications.
           </li>
           <li>
-            Building, testing, and deploying software applications and features.
+            Built simple and functional UI components including buttons, forms, 
+            navigation bars, cards, and other common interface elements using React 
+            and modern CSS frameworks.
           </li>
           <li>
-            Some big projects I&apos;ve worked on are the front-end parts of the
-            Web3 project designed for revolutionizing the real estate investment
-            landscape: leveraged blockchain, cryptocurrency, and NFT
-            technologies, Fintech project based on alpha vantage API and Yahoo
-            finance API, working on algorithms that do calculations for best
-            investment projects. Also, I created an AI Chat app based on openAI
-            API, which is for education industry.
+            Implemented responsive designs ensuring applications work effectively 
+            across different screen sizes and devices using CSS Grid, Flexbox, 
+            and responsive utility classes.
+          </li>
+          <li>
+            Collaborated with clients and team members to understand UI requirements, 
+            translating design mockups into functional React components and ensuring 
+            consistent styling across applications.
+          </li>
+          <li>
+            Styled components using CSS, Bootstrap, and Tailwind CSS to match design 
+            specifications, focusing on clean code and maintainable styling patterns.
+          </li>
+          <li>
+            Tested and debugged UI components across different browsers and devices, 
+            ensuring cross-browser compatibility and responsive design implementation.
           </li>
         </ul>
       </>
