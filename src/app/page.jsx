@@ -4,6 +4,7 @@ import { Heading, Flex, Center, Image, Box, Text } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import Typed from "typed.js";
 import SocialIcons from "../components/SocialIcons";
+import FloatingStackIcons from "../components/FloatingStackIcons";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particleConfig from "../particlesjs.json";
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <>
+      <FloatingStackIcons />
       <Center className="home-hero__wrapper">
         <Particles
           id="tsparticles"
