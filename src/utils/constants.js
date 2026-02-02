@@ -367,7 +367,7 @@ export const workData = [
   {
     company: "Solicy",
     designation: "Full-stack Developer",
-    duration: "09/2022 - 02/2024",
+    duration: "09/2021 - 02/2024",
     companyImg: "solicy_logo.jpeg",
     stacks: ["React", "Vue", "Nuxt", "JavaScript", "Next.js", "Node.js", "NestJS", "OpenAI API", "Alpha Vantage API", "Yahoo Finance API"],
     description: (
@@ -410,7 +410,7 @@ export const workData = [
   {
     company: "Upwork",
     designation: "Junior Front-end Developer",
-    duration: "05/2019 - 09/2022",
+    duration: "05/2020 - 09/2021",
     companyImg: "upwork.png",
     stacks: ["React", "CSS", "HTML", "Bootstrap", "Tailwind CSS"],
     description: (
