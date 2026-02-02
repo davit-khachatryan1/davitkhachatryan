@@ -1203,6 +1203,102 @@ html.sr .load-hidden {
     line-height: 1.5;
 }
 
+.experience-description {
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.3s ease;
+}
+
+.experience-description.collapsed {
+    max-height: 280px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 70%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 70%,
+        transparent 100%
+    );
+}
+
+.experience-description.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(27, 34, 45, 0.98)
+    );
+    pointer-events: none;
+}
+
+.experience-description.expanded {
+    max-height: 5000px;
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.experience-description.expanded::after {
+    display: none;
+}
+
+.experience-expand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.experience-expand-wrapper:hover {
+    opacity: 0.8;
+}
+
+.experience-expand-button {
+    background: rgba(95, 196, 184, 0.1) !important;
+    border: 1px solid rgba(95, 196, 184, 0.3) !important;
+    color: rgba(95, 196, 184, 0.9) !important;
+    border-radius: 8px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    transition: all 0.2s ease !important;
+}
+
+.experience-expand-button:hover {
+    background: rgba(95, 196, 184, 0.2) !important;
+    border-color: rgba(95, 196, 184, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.experience-expand-button:active {
+    transform: translateY(0);
+}
+
+.experience-expand-text {
+    font-size: 0.8rem;
+    color: rgba(95, 196, 184, 0.9);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.experience-expand-wrapper:hover .experience-expand-text {
+    color: rgba(95, 196, 184, 1);
+}
+
 .experience-stacks {
     display: grid;
     gap: 0.6rem;
@@ -1330,6 +1426,24 @@ html.sr .load-hidden {
 
     .experience-description li {
         padding-left: 1.2rem;
+    }
+
+    .experience-description.collapsed {
+        max-height: 240px;
+    }
+
+    .experience-expand-wrapper {
+        margin-top: 0.6rem;
+    }
+
+    .experience-expand-button {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+    }
+
+    .experience-expand-text {
+        font-size: 0.75rem;
     }
 
     .experience-stacks {

@@ -1,14 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState, useMemo } from "react";
 import {
   Image,
   Heading,
   Text,
   Flex,
   Box,
+  IconButton,
 } from "@chakra-ui/react";
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
-  const WorkCard = (props) => {
+const WorkCard = (props) => {
   const { company, duration, designation, companyImg, description } =
     props.data;
   const { index } = props;
@@ -16,6 +18,40 @@ import {
   const isCurrent =
     typeof duration === "string" &&
     duration.toLowerCase().includes("present");
+  
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Check if description has more than 2 list items
+  const hasMore = useMemo(() => {
+    if (!description || typeof description !== 'object' || !description.props) {
+      return false;
+    }
+    
+    const children = description.props.children;
+    let listItems = [];
+    
+    // Handle Fragment with ul
+    if (React.isValidElement(children) && children.type === 'ul') {
+      const items = children.props.children;
+      listItems = Array.isArray(items) ? items : [items];
+    } else if (Array.isArray(children)) {
+      // Handle array of children, find ul
+      const ulElement = children.find(child => 
+        React.isValidElement(child) && child.type === 'ul'
+      );
+      if (ulElement) {
+        const items = ulElement.props.children;
+        listItems = Array.isArray(items) ? items : [items];
+      }
+    }
+    
+    const validItems = listItems.filter(item => 
+      item && React.isValidElement(item) && item.type === 'li'
+    );
+    
+    return validItems.length > 2;
+  }, [description]);
+
   return (
     <>
       <Box
@@ -41,7 +77,29 @@ import {
                 {isCurrent && <Text className="experience-badge">Current</Text>}
               </Box>
             </Box>
-            <Box className="experience-description">{description}</Box>
+            <Box 
+              className={`experience-description ${isExpanded ? 'expanded' : 'collapsed'}`}
+            >
+              {description}
+            </Box>
+            {hasMore && (
+              <Box className="experience-expand-wrapper">
+                <IconButton
+                  aria-label={isExpanded ? "Collapse" : "Expand"}
+                  icon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="experience-expand-button"
+                  variant="ghost"
+                  size="sm"
+                />
+                <Text 
+                  className="experience-expand-text"
+                  onClick={() => setIsExpanded(!isExpanded)}
+                >
+                  {isExpanded ? "Show Less" : "Show More"}
+                </Text>
+              </Box>
+            )}
             {stacks.length > 0 && (
               <Box className="experience-stacks">
                 <Text className="experience-stacks__title">Stacks & Tools</Text>
