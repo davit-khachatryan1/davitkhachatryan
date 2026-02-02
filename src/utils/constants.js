@@ -273,6 +273,11 @@ export const workData = [
             with comprehensive error handling and user feedback UI.
           </li>
           <li>
+            Integrated AI capabilities and AI agents into front-end applications, working with various 
+            AI models to enhance user experiences, automate workflows, and provide intelligent 
+            features within Web3 platforms.
+          </li>
+          <li>
             Collaborated with cross-functional teams and stakeholders to translate business 
             requirements into scalable front-end solutions, ensuring alignment between 
             product vision and user interface implementation.
