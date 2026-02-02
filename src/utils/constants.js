@@ -296,31 +296,16 @@ export const workData = [
       <>
         <ul>
           <li>
-            Built reusable UI components to speed delivery and improve the overall
-            user experience.
+            Built reusable UI components using Vue.js and Nuxt 3 to accelerate 
+            development and improve user experience.
           </li>
           <li>
-            Upgraded the product from Nuxt 1 to Nuxt 3 and resolved Node.js
-            version upgrade challenges during the migration.
+            Led front-end migration from Nuxt 1 to Nuxt 3, refactoring components 
+            and resolving compatibility issues during the upgrade.
           </li>
           <li>
-            Our platform reduces time to market by streamlining asset retrieval,
-            accurate content sharing, and linking data across systems, supported
-            by an expert team and user-friendly technology.
-          </li>
-          <li>
-            Kontainer provides digital asset management (DAM) and product
-            information management (PIM) solutions that help businesses organize,
-            manage, and share digital assets securely and efficiently.
-          </li>
-          <li>
-            Served industries including fashion, luxury goods, media,
-            entertainment, and manufacturing to streamline digital workflows
-            and enhance collaboration.
-          </li>
-          <li>
-            Operated with a global presence, working with offices and partners
-            worldwide to deliver localized support for businesses of all sizes.
+            Monitored application performance metrics and optimized front-end code 
+            to ensure fast load times and smooth user interactions.
           </li>
         </ul>
       </>
