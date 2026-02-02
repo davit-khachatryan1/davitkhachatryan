@@ -48,20 +48,24 @@ const FloatingStackIcons = () => {
 
     const initializeIcons = () => {
       const iconSize = ICON_SIZE;
+      const isMobile = window.innerWidth < 768; // Mobile breakpoint
+      const iconsToShow = isMobile ? 6 : skillsData.length; // Show 6 on mobile, all on desktop
+      const iconsData = skillsData.slice(0, iconsToShow);
+      
       let spacing = 70; // Space between icons
       const bottomMargin = BOTTOM_MARGIN; // Margin from bottom
-      let totalWidth = skillsData.length * spacing;
+      let totalWidth = iconsData.length * spacing;
       
       // Adjust spacing if icons don't fit
       if (totalWidth > window.innerWidth - 40) {
-        spacing = Math.max(50, (window.innerWidth - 40) / skillsData.length);
-        totalWidth = skillsData.length * spacing;
+        spacing = Math.max(50, (window.innerWidth - 40) / iconsData.length);
+        totalWidth = iconsData.length * spacing;
       }
       
       const startX = Math.max(20, (window.innerWidth - totalWidth) / 2);
       
       // Initialize icons - arrange them at the bottom in a row
-      const initializedIcons = skillsData.map((skill, index) => {
+      const initializedIcons = iconsData.map((skill, index) => {
         const finalX = startX + index * spacing;
         const finalY = window.innerHeight - iconSize - bottomMargin;
         const startOffset = START_OFFSET + Math.random() * 80;
@@ -95,26 +99,35 @@ const FloatingStackIcons = () => {
     // Handle window resize - reposition icons at bottom
     const handleResize = () => {
       const iconSize = ICON_SIZE;
+      const isMobile = window.innerWidth < 768;
+      const iconsToShow = isMobile ? 6 : skillsData.length;
+      const iconsData = skillsData.slice(0, iconsToShow);
+      
       let spacing = 70;
       const bottomMargin = BOTTOM_MARGIN;
-      let totalWidth = skillsData.length * spacing;
+      let totalWidth = iconsData.length * spacing;
       
       // Adjust spacing if icons don't fit
       if (totalWidth > window.innerWidth - 40) {
-        spacing = Math.max(50, (window.innerWidth - 40) / skillsData.length);
-        totalWidth = skillsData.length * spacing;
+        spacing = Math.max(50, (window.innerWidth - 40) / iconsData.length);
+        totalWidth = iconsData.length * spacing;
       }
       
       const startX = Math.max(20, (window.innerWidth - totalWidth) / 2);
       
-      setIcons((prevIcons) =>
-        prevIcons.map((icon, index) => ({
-          ...icon,
-          finalX: startX + index * spacing,
-          finalY: window.innerHeight - iconSize - bottomMargin,
-          fallDistance: window.innerHeight - iconSize - bottomMargin + icon.startOffset,
-        }))
-      );
+      // Reinitialize icons if count changed (mobile/desktop switch)
+      if (icons.length !== iconsToShow) {
+        initializeIcons();
+      } else {
+        setIcons((prevIcons) =>
+          prevIcons.map((icon, index) => ({
+            ...icon,
+            finalX: startX + index * spacing,
+            finalY: window.innerHeight - iconSize - bottomMargin,
+            fallDistance: window.innerHeight - iconSize - bottomMargin + icon.startOffset,
+          }))
+        );
+      }
     };
 
     window.addEventListener("resize", handleResize);
