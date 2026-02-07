@@ -7,6 +7,7 @@ import {
   useRadioGroup,
   Center,
   Box,
+  Text,
 } from "@chakra-ui/react";
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
@@ -50,6 +51,9 @@ const Projects = () => {
             })}
           </HStack>
         </Box>
+        <Text className="projects-filter__note">
+          There are many other projects not included in this list.
+        </Text>
         <RevealWrapper delay={300}>
           <Box className="projects-grid">
             {selectedData.map((data, index) => {

@@ -61,7 +61,6 @@ const ProjectCard = (props) => {
             alt={`${title} - ${type} project built with ${stacks.slice(0, 3).join(', ')}`}
             loading="lazy"
           />
-          <Box className="project-tile__type">{type}</Box>
         </Box>
         <Box className="project-tile__body">
           <Box className="project-tile__header">
@@ -129,9 +128,6 @@ const ProjectCard = (props) => {
               </Box>
               <VStack align="start" spacing={1}>
                 <Text className="project-modal__title">{title}</Text>
-                <Badge className="project-modal__type" variant="unstyled">
-                  {type}
-                </Badge>
               </VStack>
             </HStack>
           </ModalHeader>

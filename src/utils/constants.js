@@ -443,6 +443,24 @@ export const workData = [
 export const projectsData = [
   {
     type: "WEB-APP",
+    title: "GVNR",
+    image: "gvnr",
+    link: null,
+    source: null,
+    description: "GVNR's mission is to solve the problems of the current DeFi ecosystem, unlocking trillions in liquidity by empowering developers and builders to mobilize BTC and remove the barriers between blockchains.",
+    stacks: ["React", "Vite", "Wagmi", "Reown", "Node.js", "LI.FI", "Zustand", "Viem", "Ethers.js", "TypeScript"],
+  },
+  {
+    type: "WEB-APP",
+    title: "GVNR Diamond Hands",
+    image: "dh",
+    link: null,
+    source: null,
+    description: "GVNR Diamond Hands is a revolutionary native Bitcoin DeFi product designed for HODLers — investors who know time in the market beats timing the market — and never want to sell their Bitcoin.",
+    stacks: ["React", "Vite", "Wagmi", "Reown", "Node.js", "LI.FI", "Zustand", "Viem", "Ethers.js", "TypeScript"],
+  },
+  {
+    type: "WEB-APP",
     title: "Kontainer",
     image: "kontainer",
     link: "https://kontainer.com/da",
