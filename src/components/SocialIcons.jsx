@@ -1,36 +1,21 @@
-import React from "react";
 import { socialMediaLinks } from "../utils/constants";
-import { Flex, Icon } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/next-js";
 
-const SocialIcons = () => {
-  return (
-    <Flex
-      className="social-icons"
-      alignItems="center"
-      justifyContent={["center", "center", "center"]}
-    >
-      {socialMediaLinks.map((linkData, index) => (
-        <Link
-          key={index}
-          href={linkData.href}
-          target={linkData.href.startsWith("mailto:") ? "_self" : "_blank"}
-          rel={
-            linkData.href.startsWith("mailto:")
-              ? undefined
-              : "noopener noreferrer"
-          }
-          className="social-icon"
-          style={{
-            "--brand": linkData.backgroundColor,
-            "--brand-hover": linkData.hoverColor,
-          }}
+const SocialIcons = ({ className = "" }) => (
+  <ul className={`social-icons ${className}`}>
+    {socialMediaLinks.map(({ label, href, icon: Icon }) => (
+      <li key={label}>
+        <a
+          href={href}
+          target={href.startsWith("http") ? "_blank" : undefined}
+          rel="noopener noreferrer"
+          aria-label={label}
+          title={label}
         >
-          <Icon as={linkData.icon} />
-        </Link>
-      ))}
-    </Flex>
-  );
-};
+          <Icon />
+        </a>
+      </li>
+    ))}
+  </ul>
+);
 
 export default SocialIcons;

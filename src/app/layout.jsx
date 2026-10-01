@@ -1,37 +1,49 @@
-import Favicon from "/public/images/favicon.png";
-import ClientRootLayout from "../components/ClientRootLayout";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
+import "./globals.scss";
+import { certificationsData } from "../utils/constants";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
+const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://davitkhachatryan.vercel.app";
 
+export const viewport = {
+  themeColor: "#111418",
+};
+
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Davit Khachatryan | Front-end Developer",
+    default: "Davit Khachatryan | Frontend Engineer & Applied AI Engineer",
     template: "%s | Davit Khachatryan",
   },
   description:
-    "Davit Khachatryan - Front-end Developer with 5+ years of experience building high-performance web applications. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development. View portfolio, projects, and professional experience.",
+    "Davit Khachatryan - Frontend Engineer and Applied AI Engineer with 5+ years designing and owning production frontends in TypeScript and JavaScript, and building LLM integrations, AI agents and MCP-based workflows. Claude Certified Architect - Foundations.",
   keywords: [
     "Davit Khachatryan",
-    "front-end developer",
-    "front end developer",
-    "web developer",
-    "JavaScript developer",
-    "TypeScript developer",
-    "React developer",
-    "Next.js developer",
-    "React.js developer",
-    "Node.js",
-    "Web3 developer",
-    "blockchain developer",
-    "UI developer",
-    "portfolio",
-    "software engineer",
-    "full stack developer",
-    "web3 engineer",
-    "AI developer",
+    "frontend engineer",
+    "JavaScript engineer",
+    "TypeScript",
+    "applied AI engineer",
+    "AI engineer",
+    "AI agents",
+    "LLM integrations",
+    "Model Context Protocol",
+    "MCP",
+    "Claude Agent SDK",
+    "Claude Certified Architect",
+    "frontend architecture",
+    "fintech dashboards",
+    "Yerevan",
+    "Armenia",
   ],
   authors: [{ name: "Davit Khachatryan", url: siteUrl }],
   creator: "Davit Khachatryan",
@@ -43,9 +55,9 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Davit Khachatryan | Front-end Developer | Web3 & React Specialist",
+    title: "Davit Khachatryan | Frontend Engineer & Applied AI Engineer",
     description:
-      "Front-end Developer with 5+ years of experience. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development. View portfolio, projects, and professional experience.",
+      "Frontend Engineer & Applied AI Engineer: scalable TypeScript frontends, LLM integrations, AI agents and MCP-based workflows. Claude Certified Architect - Foundations.",
     siteName: "Davit Khachatryan",
     locale: "en_US",
     images: [
@@ -53,15 +65,15 @@ export const metadata = {
         url: `${siteUrl}/images/ar-profile-transformed.png`,
         width: 1200,
         height: 630,
-        alt: "Davit Khachatryan - Front-end Developer",
+        alt: "Davit Khachatryan - Frontend Engineer & Applied AI Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Davit Khachatryan | Front-end Developer | Web3 & React Specialist",
+    title: "Davit Khachatryan | Frontend Engineer & Applied AI Engineer",
     description:
-      "Front-end Developer with 5+ years of experience. Specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development.",
+      "Frontend Engineer & Applied AI Engineer: scalable TypeScript frontends, LLM integrations, AI agents and MCP-based workflows. Claude Certified Architect - Foundations.",
     images: [`${siteUrl}/images/ar-profile-transformed.png`],
     creator: "@davitkhachatryan", // Add your Twitter handle if you have one
   },
@@ -76,10 +88,10 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: [
-    { rel: "icon", url: Favicon.src },
-    { rel: "apple-touch-icon", url: Favicon.src },
-  ],
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -93,24 +105,37 @@ export default function RootLayout({ children }) {
     "@type": "Person",
     name: "Davit Khachatryan",
     url: siteUrl,
-    jobTitle: "Front-end Developer",
-    description: "Front-end Developer with 5+ years of experience specializing in React, Next.js, TypeScript, Web3, and AI-enhanced development",
+    jobTitle: "Frontend Engineer & Applied AI Engineer",
+    description:
+      "Frontend Engineer and Applied AI Engineer with 5+ years designing and owning production frontends, building LLM integrations, AI agents and MCP-based workflows.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Yerevan",
+      addressCountry: "AM",
+    },
     knowsAbout: [
-      "Front-end Development",
-      "React",
-      "Next.js",
+      "Frontend Architecture",
       "TypeScript",
       "JavaScript",
-      "Web3",
-      "Blockchain",
-      "UI/UX Design",
+      "React",
+      "LLM Integrations",
+      "AI Agents",
+      "Model Context Protocol",
+      "Claude Agent SDK",
       "Node.js",
-      "AI Development",
+      "Fintech",
     ],
+    knowsLanguage: ["English", "Armenian", "Russian"],
     alumniOf: {
-      "@type": "Organization",
-      name: "Software Development",
+      "@type": "CollegeOrUniversity",
+      name: "Yerevan State University",
     },
+    hasCredential: certificationsData.map((cert) => ({
+      "@type": "EducationalOccupationalCredential",
+      name: cert.name,
+      recognizedBy: { "@type": "Organization", name: cert.issuer },
+      ...(cert.url && { url: cert.url }),
+    })),
     sameAs: [
       "https://github.com/davit-khachatryan1",
       "https://www.linkedin.com/in/davitkhachatryan11/",
@@ -119,28 +144,29 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className="sr">
-      <body className="body-theme">
+    <html lang="en" className={poppins.variable}>
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-
-        <Script strategy="lazyOnload" id="">
-          {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                  page_path: window.location.pathname,
-                  });
+        {children}
+        {gaId && (
+          <>
+            <Script
+              strategy="lazyOnload"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <Script strategy="lazyOnload" id="ga-init">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', { page_path: window.location.pathname });
               `}
-        </Script>
-        <ClientRootLayout>{children}</ClientRootLayout>
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
