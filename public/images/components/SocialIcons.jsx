@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "../utils/constants";
+import { socialMediaLinks } from "../../../src/utils/constants";
 
 const SocialIcons = ({ className = "" }) => (
   <ul className={`social-icons ${className}`}>
