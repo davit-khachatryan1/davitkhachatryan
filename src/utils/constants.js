@@ -1,4 +1,4 @@
-import { FaAws, FaEnvelope, FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
+import { FaAws, FaEnvelope, FaGithub, FaLinkedin, FaSlack, FaTelegramPlane } from "react-icons/fa";
 import {
   SiAngular,
   SiClaude,
@@ -10,9 +10,11 @@ import {
   SiGooglecloud,
   SiGraphql,
   SiHtml5,
+  SiHubspot,
   SiJavascript,
   SiJest,
   SiModelcontextprotocol,
+  SiN8N,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
@@ -20,10 +22,12 @@ import {
   SiRedux,
   SiSass,
   SiTailwindcss,
+  SiTelegram,
   SiTestinglibrary,
   SiTypescript,
   SiVite,
   SiVuedotjs,
+  SiZapier,
 } from "react-icons/si";
 import { BsRobot } from "react-icons/bs";
 import { HiOutlineChartBar, HiOutlineLightningBolt, HiOutlineTemplate } from "react-icons/hi";
@@ -34,6 +38,7 @@ export const links = [
   { text: "About Me", id: "about" },
   { text: "What I Do", id: "services" },
   { text: "Resume", id: "resume" },
+  { text: "Skills", id: "skills" },
   { text: "Portfolio", id: "portfolio" },
   { text: "Testimonial", id: "testimonial" },
   { text: "Contact", id: "contact" },
@@ -182,6 +187,11 @@ export const skillIcons = {
   "Claude Agent SDK": SiClaude,
   "Claude Code": SiClaude,
   "Model Context Protocol (MCP)": SiModelcontextprotocol,
+  n8n: SiN8N,
+  Zapier: SiZapier,
+  "HubSpot API": SiHubspot,
+  Slack: FaSlack,
+  "Telegram Bot API": SiTelegram,
   Git: SiGit,
   "AWS (S3, Lambda)": FaAws,
   GCP: SiGooglecloud,
@@ -195,6 +205,19 @@ export const skillsGroups = [
   {
     title: "AI Tooling",
     items: ["Claude Agent SDK", "Claude Code", "Model Context Protocol (MCP)", "LLM Integration"],
+  },
+  {
+    title: "AI Automation",
+    items: [
+      "n8n",
+      "Zapier",
+      "Clay",
+      "HubSpot API",
+      "Slack",
+      "Telegram Bot API",
+      "Webhooks",
+      "OAuth",
+    ],
   },
   {
     title: "Frontend",
@@ -226,7 +249,7 @@ export const skillsGroups = [
 export const workData = [
   {
     company: "O-dev",
-    designation: "Senior Frontend Developer",
+    designation: "Senior Software Engineer",
     duration: "08/2024 - 05/2026",
     companyImg: "odev.png",
     stacks: ["React", "Vite", "TypeScript", "Firebase", "GraphQL"],
@@ -266,7 +289,7 @@ export const workData = [
   },
   {
     company: "Kontainer",
-    designation: "Frontend Developer (Contract)",
+    designation: "Software Engineer (Contract)",
     duration: "05/2024 - 09/2024",
     companyImg: "kontainerlogo.png",
     stacks: ["Vue.js", "Nuxt 3"],
@@ -292,7 +315,7 @@ export const workData = [
   },
   {
     company: "Optimum Partners",
-    designation: "Frontend Developer",
+    designation: "Software Engineer",
     duration: "02/2024 - 06/2024",
     companyImg: "optimum_partners.jpeg",
     stacks: ["Angular", "TypeScript", "Material UI", "HTML5", "SCSS", "REST APIs"],
@@ -377,6 +400,129 @@ export const workData = [
 
 export const projectsData = [
   {
+    category: "AI Agents/Automations",
+    title: "CRM MCP Server",
+    cover: "mcp-server",
+    coverAlt:
+      "An AI assistant chat asking about quiet deals, calling a read-only search_deals tool and showing results, with approve and deny buttons for a write action, next to an MCP server panel listing read and write CRM tools.",
+    link: null,
+    source: null,
+    pitch:
+      "A custom MCP server that lets AI assistants like Claude safely read and update CRM data in plain language.",
+    description:
+      "A custom MCP server that lets AI assistants like Claude safely read and update CRM data in plain language.",
+    problem: [
+      "Reps jump between the CRM and AI chat, copy-pasting data by hand",
+      "Giving an AI full CRM access is risky",
+      "Generic connectors expose far more than a team needs",
+    ],
+    howItWorks: [
+      "The assistant asks a question in plain language and picks the right tool: search deals, get a contact, list recent activity",
+      "Read tools run straight away; write tools (log a note, update a stage) wait for the user to approve",
+      "Each user signs in with their own account, so the assistant only sees what that person can see",
+      "Results come back as short, structured answers the assistant can reason over",
+    ],
+    underTheHood: [
+      "Built with the official TypeScript MCP SDK; every tool has a Zod-validated input schema",
+      "Read and write tools are separated, and writes require explicit confirmation",
+      "OAuth per user with least-privilege scopes; tokens are never exposed to the model",
+      "Rate limiting, response trimming and clear error messages keep tool calls fast and predictable",
+    ],
+    stacks: ["MCP", "TypeScript", "Node.js", "Zod", "OAuth", "HubSpot API"],
+    pipeline: ["AI assistant", "MCP server", "Auth & scopes", "CRM API", "Answer"],
+  },
+  {
+    category: "AI Agents/Automations",
+    title: "Job Watcher",
+    cover: "job-watcher",
+    coverAlt:
+      "Telegram chat on a phone: a good-morning message announcing 3 strong matches, followed by a job card for an Automation Engineer role scored 9 out of 10 with cover letter, good match and not for me buttons.",
+    link: null,
+    source: null,
+    pitch:
+      "An AI job-hunting assistant on Telegram that watches company careers pages and sends only the jobs that fit you.",
+    description:
+      "An AI job-hunting assistant on Telegram that watches company careers pages and sends only the jobs that fit you.",
+    problem: [
+      "Checking 30 careers pages every morning",
+      "AI job bots that break on JavaScript-heavy sites",
+      "Paying for AI to re-read pages that didn't change",
+    ],
+    howItWorks: [
+      "/follow <company>: AI finds the company's careers page (own site, Lever, Greenhouse, Workable, staff.am), checks every candidate link and saves the best one",
+      "Upload a CV (PDF) and it becomes the matching profile",
+      "Every morning at 08:30, new jobs are scored 0–10 per user (skills, seniority, location) with a one-line reason and sent to Telegram",
+      "👍 / 👎 buttons teach it the user's taste; ✍️ writes a cover letter from the real CV and the job description",
+      "One bot serves many users, with admin approval",
+    ],
+    underTheHood: [
+      "Each page is fetched once, even if many users follow it",
+      "Page fingerprinting: an unchanged page means zero AI calls",
+      "Falls back to a reader service for JavaScript-rendered or blocked pages; uses JobPosting structured data when present",
+      "Keyword pre-filter before AI scoring; a small, fast model keeps costs low",
+      "A rotating queue keeps every run under 5 minutes; the admin gets a Telegram alert if a run fails",
+    ],
+    stacks: ["n8n", "Gemini", "Telegram Bot API", "n8n Data Tables", "JavaScript"],
+    pipeline: ["Careers pages", "Fetch & clean", "Changed?", "AI extracts jobs", "Score per user", "Telegram"],
+  },
+  {
+    category: "AI Agents/Automations",
+    title: "Lead Reacher",
+    cover: "lead-reacher",
+    coverAlt:
+      "Slack-style message titled Weekly picks with 5 leads: a lost-deal lead card with score 86, a why-now note, a fact-checked draft email, Contacted, Skip and Not relevant buttons, and three score bars for fit, why now and relationship.",
+    link: null,
+    source: null,
+    pitch:
+      "Turns lost deals and silent leads in HubSpot into fact-checked outreach, delivered to sales reps in Slack every week.",
+    description:
+      "Turns lost deals and silent leads in HubSpot into fact-checked outreach, delivered to sales reps in Slack every week.",
+    problem: [
+      "Lost deals and silent leads forgotten in the CRM",
+      "Reps don't know when to reach back out",
+      "AI-written emails that make up facts",
+    ],
+    howItWorks: [
+      "Pulls closed-lost deals and silent leads from HubSpot",
+      "Clay enrichment finds a \"why now\": new funding, a new executive, hiring for relevant roles, new tech, recent news",
+      "Scores every lead on fit, why-now and relationship (warm paths, past meetings), then picks the best each week within each rep's limit",
+      "Builds the message from a template; AI polishes it, and a fact-checker rejects the draft if any number, date or link changed",
+      "Reps get leads in Slack with Contacted / Skip / Not relevant buttons. It never sends emails by itself.",
+    ],
+    underTheHood: [
+      "Multi-customer: each customer connects HubSpot and Slack in one click (OAuth) and gets their own connector with an endpoint allowlist",
+      "Every data read and write is scoped to a single customer",
+      "Scoring logic is pure and deterministic, separated from all API calls",
+      "82 automated unit tests run before anything touches real systems",
+      "Hourly scheduler, daily health check and failure alerts; successful runs aren't stored, for privacy",
+    ],
+    stacks: ["n8n", "HubSpot API", "Clay", "Slack", "LLM", "JavaScript", "OAuth"],
+    pipeline: ["HubSpot", "Clay signals", "Score & select", "Draft + fact-check", "Slack"],
+  },
+  {
+    category: "AI Agents/Automations",
+    title: "Inbound Lead Routing",
+    cover: "lead-routing",
+    coverAlt:
+      "Four-step pipeline of Form, Clay, Score and Route cards connected by arrows, with an example lead scored Hot 82 and a Slack-style alert announcing a new hot lead.",
+    link: null,
+    source: null,
+    pitch: "Every new form lead is enriched, scored and sent to the right place automatically, with no manual copy-paste.",
+    description:
+      "Every new form lead is enriched, scored and sent to the right place automatically, with no manual copy-paste.",
+    problem: [
+      "New leads sit in a form inbox until someone checks",
+      "Reps waste time researching every lead by hand",
+      "Hot leads get the same slow response as cold ones",
+    ],
+    howItWorks: [
+      "Zap 1: a new form submission is sent to Clay for enrichment (company, role, size)",
+      "Zap 2: the enriched lead is scored and routed: hot leads go to HubSpot with a Slack alert, every lead is logged in Google Sheets",
+    ],
+    stacks: ["Zapier", "Clay", "HubSpot", "Slack", "Google Sheets", "Webhooks"],
+    pipeline: ["Form", "Clay enrichment", "Score", "HubSpot / Slack / Sheets"],
+  },
+  {
     category: "Web3",
     title: "GVNR",
     image: "gvnr",
@@ -395,7 +541,7 @@ export const projectsData = [
     stacks: ["React", "Vite", "Wagmi", "Reown", "Node.js", "LI.FI", "Zustand", "Viem", "Ethers.js", "TypeScript"],
   },
   {
-    category: "Web App",
+    category: "Website",
     title: "Kontainer",
     image: "kontainer",
     link: "https://kontainer.com/da",
@@ -431,7 +577,7 @@ export const projectsData = [
     stacks: ["Next.js", "TypeScript", "Web3.js", "Tailwind CSS", "Vercel"],
   },
   {
-    category: "Web App",
+    category: "Website",
     title: "YouMeme",
     image: "youmeme",
     link: "https://youmeme.com/",
@@ -440,7 +586,7 @@ export const projectsData = [
     stacks: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS S3", "OpenAI API", "Tailwind CSS"],
   },
   {
-    category: "Web App",
+    category: "Website",
     title: "Passbase",
     image: "passbase",
     link: "https://parallelmarkets.com/?utm_source=passbase.com",
@@ -458,7 +604,7 @@ export const projectsData = [
     stacks: ["React", "TypeScript", "Web3.js", "Ethers.js", "Tailwind CSS"],
   },
   {
-    category: "Web App",
+    category: "Website",
     title: "Raizers",
     image: "raizer",
     link: "https://raize-front.web.app/",

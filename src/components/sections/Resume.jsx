@@ -92,6 +92,7 @@ const Resume = () => (
         ))}
       </ul>
 
+      <div id="skills">
       <h3 className="resume__heading resume__heading--section">My Skills</h3>
       <div className="skills">
         {skillsGroups.map((group, index) => (
@@ -110,6 +111,7 @@ const Resume = () => (
             </ul>
           </Reveal>
         ))}
+      </div>
       </div>
 
       <div className="text-center">

@@ -15,11 +15,16 @@ const Sidebar = ({ links }) => {
       .filter(Boolean);
 
     // A section counts as active once it crosses the middle of the viewport.
+    // Sections can nest (Skills sits inside Resume), so pick the last one in
+    // link order that contains the middle line.
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
+      () => {
+        const middle = window.innerHeight / 2;
+        const current = sections.filter((section) => {
+          const { top, bottom } = section.getBoundingClientRect();
+          return top <= middle && bottom > middle;
         });
+        if (current.length) setActive(current[current.length - 1].id);
       },
       { rootMargin: "-50% 0px -50% 0px" }
     );
