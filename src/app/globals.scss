@@ -1261,10 +1261,8 @@ section[id] {
 .contact {
   display: grid;
   gap: 3rem;
-
-  @include lg {
-    grid-template-columns: 1fr 2fr;
-  }
+  max-width: 40rem;
+  margin-inline: auto;
 
   &__heading {
     margin-bottom: 1.25rem;

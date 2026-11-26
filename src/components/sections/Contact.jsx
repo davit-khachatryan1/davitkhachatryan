@@ -1,7 +1,6 @@
 import { FaEnvelope, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import SectionTitle from "../SectionTitle";
 import SocialIcons from "../SocialIcons";
-import ContactForm from "./ContactForm";
 import { profile } from "../../utils/constants";
 
 const Contact = () => (
@@ -39,10 +38,6 @@ const Contact = () => (
           </ul>
           <h3 className="contact__heading contact__heading--small">Follow Me</h3>
           <SocialIcons className="social-icons--large" />
-        </div>
-        <div>
-          <h3 className="contact__heading">Send Me a Note</h3>
-          <ContactForm />
         </div>
       </div>
     </div>
